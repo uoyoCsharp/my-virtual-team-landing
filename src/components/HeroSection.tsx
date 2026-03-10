@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion"
 import { Star, BookOpen, Copy, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SplitText } from "@/components/ui/SplitText"
+import { PlatformBadge } from "@/components/ui/PlatformBadge"
 import { useTranslation } from "react-i18next"
 
 function TerminalAnimation() {
@@ -166,6 +167,11 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
           className="w-full text-center lg:text-left lg:pr-8"
         >
+          {/* Platform Support Badge */}
+          <div className="flex justify-center lg:justify-start mb-4 sm:mb-6">
+            <PlatformBadge />
+          </div>
+
           <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight tracking-tight mb-3 sm:mb-4 lg:mb-6">
             <SplitText
               text={t("hero.titlePart1", "Unleash Your Potential with an ")}

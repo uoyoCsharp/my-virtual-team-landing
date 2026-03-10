@@ -166,7 +166,7 @@
   },
   "commands": {
     "title": "Master Your Commands",
-    "subtitle": "Use simple # directives to interrupt or spawn an expert agent.",
+    "subtitle": "Use simple # directives to interrupt or spawn an expert agent. After installation, use the following commands in GitHub Copilot or Claude Code:",
     "sections": [
       {
         "title": "🚀 System & Workflow",
