@@ -18,7 +18,9 @@
       "Bash(npm install:*)",
       "Bash(vercel link:*)",
       "Bash(vercel inspect:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(git remote:*)",
+      "Bash(git:*)"
     ]
   }
 }
