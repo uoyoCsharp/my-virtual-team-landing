@@ -49,8 +49,11 @@ export function Logo({ className }: LogoProps) {
       </div>
 
       {/* Brand name with gradient */}
-      <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-primary via-neon to-accent bg-clip-text text-transparent">
+      <span className="font-bold text-base sm:text-lg tracking-tight bg-gradient-to-r from-primary via-neon to-accent bg-clip-text text-transparent hidden sm:inline">
         My-Virtual-TechTeam
+      </span>
+      <span className="font-bold text-base tracking-tight bg-gradient-to-r from-primary via-neon to-accent bg-clip-text text-transparent sm:hidden">
+        MVTT
       </span>
     </motion.a>
   )

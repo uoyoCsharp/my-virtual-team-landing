@@ -19,7 +19,7 @@ export function WorkflowSection() {
   ];
 
   return (
-    <section id="workflow" className="relative py-24 sm:py-32" ref={ref}>
+    <section id="workflow" className="relative py-16 sm:py-24 lg:py-32" ref={ref}>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full opacity-10"
@@ -28,44 +28,67 @@ export function WorkflowSection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : undefined} transition={{ duration: 0.6 }} className="text-center mb-20">
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : undefined} transition={{ duration: 0.6 }} className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-3 sm:mb-4">
             <span className="bg-gradient-to-r from-neon to-primary bg-clip-text text-transparent">
               {t("workflow.title")}
             </span>
           </h2>
-          <p className="text-muted text-lg max-w-2xl mx-auto">{t("workflow.subtitle")}</p>
+          <p className="text-muted text-base sm:text-lg max-w-2xl mx-auto">{t("workflow.subtitle")}</p>
         </motion.div>
 
-        <div className="relative space-y-8">
+        <div className="relative space-y-6 sm:space-y-8">
+          {/* Mobile: Horizontal timeline indicator */}
+          <div className="lg:hidden flex items-center gap-2 mb-6 overflow-x-auto pb-2 scrollbar-hide">
+            {itemsInfo && itemsInfo.map((_, i) => {
+              const vis = visuals[i % visuals.length];
+              return (
+                <div key={i} className="flex items-center gap-2 shrink-0">
+                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: vis.glowColor.replace("0.15", "0.8") }} />
+                  {i < (itemsInfo?.length || 0) - 1 && <div className="w-4 h-px bg-white/10" />}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Desktop: Vertical timeline */}
           <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-neon/40 via-primary/40 via-accent/40 via-success/40 to-yellow-400/40 hidden lg:block" />
 
           {itemsInfo && itemsInfo.map((step, i) => {
             const vis = visuals[i % visuals.length];
             return (
             <motion.div key={step.id} initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : undefined} transition={{ duration: 0.5, delay: 0.15 * i }} className="relative">
+              {/* Mobile: Card number badge */}
+              <div className="lg:hidden absolute -left-1 top-4 w-6 h-6 rounded-full bg-surface border border-white/10 flex items-center justify-center text-xs font-mono text-muted">
+                {i + 1}
+              </div>
+
+              {/* Desktop: Timeline dot */}
               <div className="absolute left-8 top-8 w-3 h-3 -translate-x-1.5 rounded-full bg-current hidden lg:block" style={{ color: vis.glowColor.replace("0.15", "1") }}>
                 <div className="absolute inset-0 rounded-full animate-ping opacity-30" style={{ backgroundColor: vis.glowColor.replace("0.15", "0.6") }} />
               </div>
-              <div className="lg:ml-16 grid lg:grid-cols-2 gap-6 items-start">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <code className={cn("font-mono text-sm font-semibold px-3 py-1.5 rounded-lg border border-white/[0.08] bg-surface", vis.color)}>{step.command}</code>
-                    <span className="text-xs text-muted font-mono">→ {vis.agent}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground">{step.desc1}</h3>
-                  <p className="text-sm text-muted leading-relaxed">{step.desc2}</p>
-                </div>
-                <div className="bg-[#0d0d12] border border-white/[0.06] rounded-xl overflow-hidden shadow-2xl">
-                  <div className="px-4 py-2 border-b border-white/[0.06] flex items-center justify-between bg-white/[0.02]">
-                    <div className="flex gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
+
+              <div className="lg:ml-16 ml-8 sm:ml-10">
+                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 items-start">
+                  <div className="space-y-2 sm:space-y-3">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                      <code className={cn("font-mono text-xs sm:text-sm font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-white/[0.08] bg-surface", vis.color)}>{step.command}</code>
+                      <span className="text-xs text-muted font-mono">→ {vis.agent}</span>
                     </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground">{step.desc1}</h3>
+                    <p className="text-sm text-muted leading-relaxed">{step.desc2}</p>
                   </div>
-                  <div className="p-4 overflow-x-auto">
-                    <pre className="text-xs font-mono leading-loose"><code className="text-muted/80">{vis.snippet}</code></pre>
+                  <div className="bg-[#0d0d12] border border-white/[0.06] rounded-xl overflow-hidden shadow-2xl w-full">
+                    <div className="px-3 sm:px-4 py-2 border-b border-white/[0.06] flex items-center justify-between bg-white/[0.02]">
+                      <div className="flex gap-1.5">
+                        <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-white/20" />
+                        <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-white/20" />
+                        <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-white/20" />
+                      </div>
+                    </div>
+                    <div className="p-3 sm:p-4 overflow-x-auto">
+                      <pre className="text-[10px] sm:text-xs font-mono leading-loose"><code className="text-muted/80">{vis.snippet}</code></pre>
+                    </div>
                   </div>
                 </div>
               </div>
