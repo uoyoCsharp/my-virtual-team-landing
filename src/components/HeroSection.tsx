@@ -1,27 +1,29 @@
 import { useEffect, useRef, useState, useCallback } from "react"
 import { motion, useInView } from "framer-motion"
-import { Star, BookOpen } from "lucide-react"
+import { Star, BookOpen, Copy, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SplitText } from "@/components/ui/SplitText"
-
-const terminalLines = [
-  { type: "input" as const, text: "$ #init" },
-  { type: "output" as const, text: "[Conductor] Initializing virtual tech team..." },
-  { type: "output" as const, text: "[Conductor] Loading registry.yaml..." },
-  { type: "output" as const, text: "" },
-  { type: "success" as const, text: "✓ Analyst agent activated" },
-  { type: "success" as const, text: "✓ Architect agent activated" },
-  { type: "success" as const, text: "✓ Developer agent activated" },
-  { type: "success" as const, text: "✓ Reviewer agent activated" },
-  { type: "success" as const, text: "✓ Tester agent activated" },
-  { type: "output" as const, text: "" },
-  { type: "output" as const, text: "[Conductor] Team is ready. Awaiting instructions..." },
-  { type: "input" as const, text: "$ #analyze --requirement \"User auth module\"" },
-  { type: "output" as const, text: "[Analyst] Analyzing requirement..." },
-  { type: "output" as const, text: "[Analyst] Generated: workspace/requirements/user-auth.md" },
-]
+import { useTranslation } from "react-i18next"
 
 function TerminalAnimation() {
+  const { t } = useTranslation()
+  
+  const terminalLines = [
+    { type: "input" as const, text: t("hero.terminal.userInit", "$ #init") },
+    { type: "output" as const, text: t("hero.terminal.conductorStart", "[Conductor] Initializing virtual tech team...") },
+    { type: "output" as const, text: t("hero.terminal.conductorParse", "[Conductor] Loading registry.yaml...") },
+    { type: "output" as const, text: "" },
+    { type: "success" as const, text: t("hero.terminal.agent1", "✓ Analyst agent activated") },
+    { type: "success" as const, text: t("hero.terminal.agent2", "✓ Architect agent activated") },
+    { type: "success" as const, text: t("hero.terminal.agent3", "✓ Developer agent activated") },
+    { type: "success" as const, text: t("hero.terminal.agent4", "✓ Reviewer agent activated") },
+    { type: "success" as const, text: t("hero.terminal.agent5", "✓ Tester agent activated") },
+    { type: "output" as const, text: "" },
+    { type: "output" as const, text: t("hero.terminal.conductorContext", "[Conductor] Team is ready. Awaiting instructions...") },
+    { type: "input" as const, text: t("hero.terminal.userInput2", "$ #analyze --requirement \"User auth module\"") },
+    { type: "output" as const, text: t("hero.terminal.systemReady", "[Analyst] Analyzing requirement...") },
+  ]
+
   const [visibleLines, setVisibleLines] = useState<number>(0)
   const [currentText, setCurrentText] = useState("")
   const [isTyping, setIsTyping] = useState(false)
@@ -121,6 +123,14 @@ function TerminalAnimation() {
 
 export function HeroSection() {
   const sectionRef = useRef(null)
+  const { t } = useTranslation()
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("npx degit uoyoCsharp/My-Virtual-TechTeam")
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   return (
     <section
@@ -156,17 +166,12 @@ export function HeroSection() {
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
             <SplitText
-              text="Unleash Your Potential with an "
+              text={t("hero.titlePart1", "Unleash Your Potential with an ")}
               className="inline"
               charDelay={0.02}
             />
-            <span className="bg-gradient-to-r from-primary via-neon to-accent bg-clip-text text-transparent">
-              <SplitText
-                text="AI Virtual Tech Team"
-                className="inline"
-                delay={0.6}
-                charDelay={0.03}
-              />
+            <span className="bg-gradient-to-r from-primary via-neon to-accent bg-clip-text text-transparent inline">
+              {t("hero.titlePart2", "AI Virtual Tech Team")}
             </span>
           </h1>
 
@@ -176,8 +181,7 @@ export function HeroSection() {
             transition={{ delay: 1.2, duration: 0.6 }}
             className="text-lg text-muted max-w-xl mb-8 leading-relaxed"
           >
-            基于提示词工程构建的多架构 AI Agent 框架。将复杂的软件开发生命周期交由虚拟的
-            Analyst, Architect 和 Developer 协作完成。
+            {t("hero.subtitle", "基于提示词工程构建的多架构 AI Agent 框架。将复杂的软件开发生命周期交由虚拟的 Analyst, Architect 和 Developer 协作完成。")}
           </motion.p>
 
           <motion.div
@@ -193,7 +197,7 @@ export function HeroSection() {
             >
               <Button size="lg">
                 <Star className="w-4 h-4" />
-                View on GitHub
+                {t("hero.viewGithub", "View on GitHub")}
               </Button>
             </a>
             <a
@@ -203,9 +207,36 @@ export function HeroSection() {
             >
               <Button variant="outline" size="lg">
                 <BookOpen className="w-4 h-4" />
-                Read the Docs
+                {t("hero.quickStart", "Read the Docs")}
               </Button>
             </a>
+          </motion.div>
+          
+          {/* Quick Install Section */}
+          <motion.div 
+             initial={{ opacity: 0, y: 10 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ delay: 1.8, duration: 0.5 }}
+             className="mt-12 p-5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm max-w-md"
+          >
+            <div className="flex items-center justify-between mb-3 text-sm">
+              <span className="text-foreground font-medium">{t("install.title", "Start Building in Seconds")}</span>
+            </div>
+            <p className="text-xs text-muted mb-4">
+              {t("install.description", "Out of the box. Use npx degit to directly pull the AI virtual team scaffolding.")}
+            </p>
+            <div className="flex items-center gap-2 bg-black/40 p-3 rounded-lg border border-white/5 relative group">
+              <code className="text-xs font-mono text-primary flex-1 overflow-x-auto whitespace-nowrap scrollbar-hide">
+                npx degit uoyoCsharp/My-Virtual-TechTeam
+              </code>
+              <button 
+                onClick={handleCopy}
+                className="text-muted hover:text-foreground transition-colors absolute right-3 shrink-0 bg-black/60 p-1 rounded backdrop-blur-md"
+                title="Copy to clipboard"
+              >
+                {copied ? <Check className="w-4 h-4 text-success" /> : <Copy className="w-4 h-4" />}
+              </button>
+            </div>
           </motion.div>
         </motion.div>
 

@@ -20,7 +20,10 @@
       "Bash(vercel inspect:*)",
       "Bash(rm:*)",
       "Bash(git remote:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(vercel ls:*)",
+      "Bash(mkdir:*)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ]
   }
 }

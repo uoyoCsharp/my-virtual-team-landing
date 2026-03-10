@@ -1,19 +1,26 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Github, Menu, X } from "lucide-react"
+import { Github, Menu, X, Languages } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Logo } from "@/components/ui/Logo"
 import { cn } from "@/lib/utils"
-
-const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Workflow", href: "#workflow" },
-  { label: "Agents", href: "#agents" },
-  { label: "Architecture", href: "#architecture" },
-]
+import { useTranslation } from "react-i18next"
 
 export function Navbar() {
+  const { t, i18n } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+
+  const navLinks = [
+    { label: t("nav.features"), href: "#features" },
+    { label: t("nav.workflow"), href: "#workflow" },
+    { label: t("nav.agents"), href: "#agents" },
+    { label: t("nav.architecture"), href: "#architecture" },
+  ]
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'zh' : 'en')
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -32,14 +39,7 @@ export function Navbar() {
     >
       <nav className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center">
-            <div className="w-3 h-3 rounded-sm bg-primary shadow-lg shadow-primary/50" />
-          </div>
-          <span className="font-bold text-foreground text-lg tracking-tight">
-            My-Virtual-TechTeam
-          </span>
-        </a>
+        <Logo />
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">
@@ -57,6 +57,10 @@ export function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3">
+          <Button variant="ghost" size="icon" onClick={toggleLanguage} title="Change Language">
+            <Languages className="w-5 h-5" />
+            <span className="sr-only">{t("nav.language")}</span>
+          </Button>
           <a
             href="https://github.com/uoyoCsharp/My-Virtual-TechTeam"
             target="_blank"
@@ -67,7 +71,7 @@ export function Navbar() {
             </Button>
           </a>
           <a href="https://github.com/uoyoCsharp/My-Virtual-TechTeam" target="_blank" rel="noopener noreferrer">
-            <Button>Get Started</Button>
+            <Button>{t("nav.getStarted")}</Button>
           </a>
         </div>
 
@@ -100,26 +104,32 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <div className="flex gap-3 mt-2">
-                <a
-                  href="https://github.com/uoyoCsharp/My-Virtual-TechTeam"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <Button variant="outline" className="w-full">
-                    <Github className="w-4 h-4" />
-                    GitHub
-                  </Button>
-                </a>
-                <a
-                  href="https://github.com/uoyoCsharp/My-Virtual-TechTeam"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <Button className="w-full">Get Started</Button>
-                </a>
+              <div className="flex flex-col gap-3 mt-4 mb-2">
+                <Button variant="outline" className="w-full justify-center" onClick={() => { toggleLanguage(); setMobileOpen(false); }}>
+                  <Languages className="w-4 h-4 mr-2" />
+                  {t("nav.language")}
+                </Button>
+                <div className="flex gap-3">
+                  <a
+                    href="https://github.com/uoyoCsharp/My-Virtual-TechTeam"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <Button variant="outline" className="w-full">
+                      <Github className="w-4 h-4 mr-2" />
+                      {t("nav.github")}
+                    </Button>
+                  </a>
+                  <a
+                    href="https://github.com/uoyoCsharp/My-Virtual-TechTeam"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1"
+                  >
+                    <Button className="w-full">{t("nav.getStarted")}</Button>
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>

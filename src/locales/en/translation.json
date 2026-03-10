@@ -1,0 +1,249 @@
+{
+  "nav": {
+    "features": "Features",
+    "workflow": "Workflow",
+    "agents": "Agents",
+    "architecture": "Architecture",
+    "github": "GitHub",
+    "getStarted": "Get Started",
+    "language": "CN"
+  },
+  "hero": {
+    "titlePart1": "Unleash Your Potential with an ",
+    "titlePart2": "AI Virtual Tech Team",
+    "subtitle": "A multi-agent collaboration framework built on prompt engineering. Break down complex software lifecycles and hand them over to your virtual Analyst, Architect, and Developer.",
+    "quickStart": "Quick Start",
+    "viewGithub": "View on GitHub",
+    "terminal": {
+      "userInit": "$ #init",
+      "conductorStart": "[Conductor started] Initializing My-Virtual-TechTeam framework...",
+      "conductorParse": "[Conductor] Parsing project...",
+      "conductorContext": "[Conductor] Context is ready.",
+      "agent1": "✓ Analyst agent activated",
+      "agent2": "✓ Architect agent activated",
+      "agent3": "✓ Developer agent activated",
+      "agent4": "✓ Reviewer agent activated",
+      "agent5": "✓ Tester agent activated",
+      "systemReady": "> System: Virtual development team assembled. Awaiting tasks...",
+      "userInput2": "$ #analyze --requirement \"User auth module\"",
+      "analyzing": "[Analyst] Analyzing requirement..."
+    }
+  },
+  "install": {
+    "title": "Start Building in Seconds",
+    "description": "Out of the box. Use npx degit to directly pull the AI virtual team scaffolding into your local workspace. Say goodbye to heavy configurations."
+  },
+  "features": {
+    "title1": "Why ",
+    "title2": "My-Virtual-TechTeam",
+    "title3": "?",
+    "subtitle": "Nine core capabilities that make your AI-powered development team efficient, modular, and truly platform-agnostic.",
+    "items": [
+      {
+        "title": "Role Separation",
+        "titleZh": "🎭 Clear Role Boundaries",
+        "desc": "Say goodbye to chaotic single-LLM outputs. Each Agent has a precise role and focuses on what it does best."
+      },
+      {
+        "title": "Platform Agnostic",
+        "titleZh": "🌐 Platform Agnostic",
+        "desc": "Core framework based on pure text. Works perfectly with GitHub Copilot and planned support for Claude Code."
+      },
+      {
+        "title": "Unified Registry",
+        "titleZh": "📂 Centralized Brain",
+        "desc": "A single registry.yaml governs all AI resources, contexts, history, and toolsets."
+      },
+      {
+        "title": "Context Contract",
+        "titleZh": "🤝 Smart Context Contract",
+        "desc": "Each agent declares its prerequisites clearly to eliminate hallucinations and false inferences."
+      },
+      {
+        "title": "Data Tiering",
+        "titleZh": "🗄️ Hot/Warm/Cold Storage",
+        "desc": "Innovative state management optimizes enormous context windows for perfectly timed memory recall."
+      },
+      {
+        "title": "Semantic Index",
+        "titleZh": "🧠 Semantic Knowledge",
+        "desc": "Project specific guidelines and domain knowledge are semantically indexed and loaded on demand."
+      },
+      {
+        "title": "Semi-automatic workflows",
+        "titleZh": "⚙️ Human-in-the-loop",
+        "desc": "Not completely blind automation. Developers guide the design approval before code generation starts."
+      },
+      {
+        "title": "Modular Skills",
+        "titleZh": "🧩 Hot-swappable Skills",
+        "desc": "Dynamically mount specific skills (e.g. specialized API usage) directly to an agent."
+      },
+      {
+        "title": "Language Agnostic",
+        "titleZh": "🌍 Any Language",
+        "desc": "Whether TypeScript, Python, C#, or Rust, your AI team seamlessly adapts."
+      }
+    ]
+  },
+  "workflow": {
+    "title": "Seamless Development Lifecycle",
+    "subtitle": "How the # directives trigger the pipeline.",
+    "items": [
+      {
+        "id": "1",
+        "command": "#analyze",
+        "desc1": "Extract business concepts, analyze PRD documents.",
+        "desc2": "Structured requirement breakdown and acceptance criteria."
+      },
+      {
+        "id": "2",
+        "command": "#design",
+        "desc1": "Establish tech stack, plan system/module architecture.",
+        "desc2": "Verifiable architectural blueprints and DB/API design."
+      },
+      {
+        "id": "3",
+        "command": "#implement",
+        "desc1": "Implement business code according to the blueprint.",
+        "desc2": "Business domain code strictly adhering to context contracts."
+      },
+      {
+        "id": "4",
+        "command": "#review",
+        "desc1": "Deep code dive, execute static and standard checks.",
+        "desc2": "Refactoring suggestions and quality improvement reports."
+      },
+      {
+        "id": "5",
+        "command": "#test",
+        "desc1": "Design test cases for core business paths.",
+        "desc2": "High-coverage unit/integration testing code."
+      }
+    ]
+  },
+  "agents": {
+    "title": "Your Dedicated Specialists",
+    "subtitle": "Meet your virtual development team.",
+    "items": [
+      {
+        "name": "Conductor",
+        "role": "Dispatcher",
+        "desc": "The core dispatcher managing the task flow. Wakes up other agents.",
+        "cmds": "#init, #status, #config"
+      },
+      {
+        "name": "Analyst",
+        "role": "Business Expert",
+        "desc": "Transforms long-form documents or messy code into solid business domain concepts.",
+        "cmds": "#analyze, #analyze-code"
+      },
+      {
+        "name": "Architect",
+        "role": "System Designer",
+        "desc": "Based on analysis, establishes the tech stack and designs strict architectural blueprints.",
+        "cmds": "#design"
+      },
+      {
+        "name": "Developer",
+        "role": "Implementer",
+        "desc": "Flawlessly follows the blueprint to write elegant, production-grade code.",
+        "cmds": "#implement, #fix, #refactor"
+      },
+      {
+        "name": "Reviewer",
+        "role": "Quality Gatekeeper",
+        "desc": "Critiques submitted code with extremely strict standards to find flaws.",
+        "cmds": "#review"
+      },
+      {
+        "name": "Tester",
+        "role": "Security Guardian",
+        "desc": "Explores edge cases and builds automated testing scripts.",
+        "cmds": "#test"
+      }
+    ]
+  },
+  "commands": {
+    "title": "Master Your Commands",
+    "subtitle": "Use simple # directives to interrupt or spawn an expert agent.",
+    "sections": [
+      {
+        "title": "🚀 System & Workflow",
+        "cmds": [
+          {
+            "cmd": "#init",
+            "desc": "Project initialization. Inject team structure."
+          },
+          {
+            "cmd": "#status",
+            "desc": "Check current workflow status."
+          },
+          {
+            "cmd": "#config",
+            "desc": "Modify framework configuration or LLM."
+          },
+          {
+            "cmd": "#sync-context",
+            "desc": "Force update AI workspace memory."
+          },
+          {
+            "cmd": "#cleanup",
+            "desc": "Clean up AI chat history and artifacts."
+          }
+        ]
+      },
+      {
+        "title": "🕵️‍♂️ Analysis & Design",
+        "cmds": [
+          {
+            "cmd": "#analyze",
+            "desc": "Requirements analysis from PRD."
+          },
+          {
+            "cmd": "#analyze-code",
+            "desc": "Reverse engineer legacy codebases."
+          },
+          {
+            "cmd": "#design",
+            "desc": "Tech blueprint and module splitting."
+          }
+        ]
+      },
+      {
+        "title": "💻 Implementation & Quality",
+        "cmds": [
+          {
+            "cmd": "#implement",
+            "desc": "Start writing business code."
+          },
+          {
+            "cmd": "#fix / #refactor",
+            "desc": "Smart fix and structural refactoring."
+          },
+          {
+            "cmd": "#review",
+            "desc": "Code review and security checks."
+          },
+          {
+            "cmd": "#test",
+            "desc": "Generate unit and edge testing."
+          }
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "titlePart1": "Ready to hire your AI Tech Team?",
+    "subtitle": "Clone the repo, open in VS Code, and type #init to start.",
+    "button": "Star on GitHub"
+  },
+  "footer": {
+    "copyright": "© 2026 My-Virtual-TechTeam. Licensed under MIT.",
+    "links": {
+      "rep": "GitHub Repo",
+      "doc": "Documentation",
+      "issue": "Report an Issue"
+    }
+  }
+}

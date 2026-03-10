@@ -1,0 +1,249 @@
+{
+  "nav": {
+    "features": "特性",
+    "workflow": "工作流",
+    "agents": "特工团队",
+    "architecture": "架构",
+    "github": "GitHub",
+    "getStarted": "开始使用",
+    "language": "EN"
+  },
+  "hero": {
+    "titlePart1": "释放你的开发潜能，打造你的",
+    "titlePart2": "私人AI技术团队",
+    "subtitle": "基于提示词工程构建的多 Agent 协作框架。将复杂的软件生命周期拆解，交由虚拟的 Analyst, Architect 和 Developer 共同完成。体验像点外卖一样简单的软件开发。",
+    "quickStart": "快速开始",
+    "viewGithub": "在 GitHub 上查看",
+    "terminal": {
+      "userInit": "$ #init",
+      "conductorStart": "[Conductor 启动] 初始化 My-Virtual-TechTeam 框架...",
+      "conductorParse": "[Conductor] 正在解析 registry.yaml...",
+      "conductorContext": "[Conductor] 上下文已准备就绪",
+      "agent1": "✓ Analyst (分析师) 特工已激活",
+      "agent2": "✓ Architect (架构师) 特工已激活",
+      "agent3": "✓ Developer (开发者) 特工已激活",
+      "agent4": "✓ Reviewer (审查员) 特工已激活",
+      "agent5": "✓ Tester (测试员) 特工已激活",
+      "systemReady": "[Conductor] 团队已就绪。等待分配任务...",
+      "userInput2": "$ #analyze --requirement \"用户认证模块\"",
+      "analyzing": "[Analyst] 正在分析需求..."
+    }
+  },
+  "install": {
+    "title": "只需几秒，立刻开箱即用",
+    "description": "开箱即用，通过 npx degit 直接将整个 AI 虚拟团队项目脚手架引入你的本地工作区，告别繁重的配置。"
+  },
+  "features": {
+    "title1": "为什么选择 ",
+    "title2": "My-Virtual-TechTeam",
+    "title3": "？",
+    "subtitle": "核心特性让你的私人 AI 技术团队脱颖而出。",
+    "items": [
+      {
+        "title": "Role Separation",
+        "titleZh": "🎭 明确的职责边界",
+        "desc": "告别单一的大语言模型混乱输出。每个 Agent 拥有精准设定的角色定位与边界，专注于自己最擅长的环节。"
+      },
+      {
+        "title": "Platform Agnostic",
+        "titleZh": "🌐 跨平台运行",
+        "desc": "核心框架基于纯文本和提示词工程，完美适配 GitHub Copilot，并计划支持 Claude Code 等主流 AI 编程助手。"
+      },
+      {
+        "title": "Unified Registry",
+        "titleZh": "📂 集中式大脑",
+        "desc": "通过 registry.yaml 统一管理所有 AI 资源、上下文、历史记录和工具集，大模型首选的系统入口。"
+      },
+      {
+        "title": "Context Contract",
+        "titleZh": "🤝 智能上下文契约",
+        "desc": "每个特工明确声明前置依赖。确保 AI 在分析和编码时获得精确的上下文，杜绝“幻觉”和错误推断。"
+      },
+      {
+        "title": "Data Tiering",
+        "titleZh": "🗄️ 冷热温数据分层",
+        "desc": "创新的状态管理优化极长的上下文窗口使用效率，让 AI 记忆既快又准。"
+      },
+      {
+        "title": "Semantic Index",
+        "titleZh": "🧠 语义化知识索取",
+        "desc": "特定代码规范和业务知识按语义索引，各领域特工仅在需要时按需精确加载，节省 Token 成本。"
+      },
+      {
+        "title": "Semi-automatic workflows",
+        "titleZh": "⚙️ 人机协同控制流",
+        "desc": "非完全盲目的全自动运行。提供阶段性的确认工作流，由开发者主导确认设计方案，再向下流转代码生成。"
+      },
+      {
+        "title": "Modular Skills",
+        "titleZh": "🧩 热插拔技能树",
+        "desc": "根据开发任务动态挂载各种专业技能（Skills），让你的团队能随时“学会”使用特定 API 或排查复杂错误。"
+      },
+      {
+        "title": "Language Agnostic",
+        "titleZh": "🌍 任意语言支持",
+        "desc": "无论你是写 TypeScript、Python、C# 还是 Rust，由 AI 组成的团队都能无缝切换语言栈和技术栈。"
+      }
+    ]
+  },
+  "workflow": {
+    "title": "丝滑的开发全生命周期",
+    "subtitle": "了解 # 指令如何触发强大的流水线。",
+    "items": [
+      {
+        "id": "1",
+        "command": "#analyze",
+        "desc1": "提取业务概念，分析 PRD 文档。",
+        "desc2": "结构化的需求拆解与验收标准。"
+      },
+      {
+        "id": "2",
+        "command": "#design",
+        "desc1": "制定技术栈，规划系统/模块架构。",
+        "desc2": "可验证的架构蓝图与数据库/API设计。"
+      },
+      {
+        "id": "3",
+        "command": "#implement",
+        "desc1": "根据架构设计，落实业务代码。",
+        "desc2": "业务领域代码，严格遵守上下文契约。"
+      },
+      {
+        "id": "4",
+        "command": "#review",
+        "desc1": "深入代码内部，执行静态与规范检查。",
+        "desc2": "重构建议与质量改进报告。"
+      },
+      {
+        "id": "5",
+        "command": "#test",
+        "desc1": "针对核心业务路径设计测试用例。",
+        "desc2": "高覆盖率的单元测试/集成测试代码。"
+      }
+    ]
+  },
+  "agents": {
+    "title": "你麾下的专属专家",
+    "subtitle": "认识你的虚拟特工阵容。",
+    "items": [
+      {
+        "name": "指挥官 (Conductor)",
+        "role": "掌控全局",
+        "desc": "框架的核心入口，负责解析用户意图，唤醒相应特工并监控流转状态。",
+        "cmds": "#init, #status, #config"
+      },
+      {
+        "name": "分析师 (Analyst)",
+        "role": "洞察业务",
+        "desc": "擅长阅读长篇文档或庞杂的既有代码，将其转化为开发可落实的业务域概念。",
+        "cmds": "#analyze, #analyze-code"
+      },
+      {
+        "name": "架构师 (Architect)",
+        "role": "构筑基石",
+        "desc": "基于分析结果，拍板技术选型，设计严谨的系统分层架构方案与接口契约。",
+        "cmds": "#design"
+      },
+      {
+        "name": "开发者 (Developer)",
+        "role": "代码实现者",
+        "desc": "完美遵循架构师蓝图，不偏离上下文，撰写优雅、符合最佳实践的生产级代码。",
+        "cmds": "#implement, #fix, #refactor"
+      },
+      {
+        "name": "审查员 (Reviewer)",
+        "role": "质量门神",
+        "desc": "用极其严苛的标准检查 Developer 提交的代码，查找逻辑漏洞、安全隐患与不优雅的坏味道。",
+        "cmds": "#review"
+      },
+      {
+        "name": "测试员 (Tester)",
+        "role": "安全铸造者",
+        "desc": "探索边缘用例，编写自动化测试脚本，把关最后一公里的代码可靠性。",
+        "cmds": "#test"
+      }
+    ]
+  },
+  "commands": {
+    "title": "掌握指挥官的魔杖",
+    "subtitle": "通过极简的 # 前置指令，你可以随时打断工作流，或者唤醒某个领域的专属 AI 特工为你解决疑难杂症。",
+    "sections": [
+      {
+        "title": "🚀 系统与流程管理",
+        "cmds": [
+          {
+            "cmd": "#init",
+            "desc": "项目初始化。为你的空白仓库快速注入结构和基础配置。"
+          },
+          {
+            "cmd": "#status",
+            "desc": "状态巡场。随时查看当前开发流程卡在哪一步。"
+          },
+          {
+            "cmd": "#config",
+            "desc": "框架配置。调出交互式面板修改框架默认配置。"
+          },
+          {
+            "cmd": "#sync-context",
+            "desc": "上下文同步。强制更新 AI 的工作区记忆。"
+          },
+          {
+            "cmd": "#cleanup",
+            "desc": "快速清理。一键清理 AI 对话积累的历史记录和冗余工件。"
+          }
+        ]
+      },
+      {
+        "title": "🕵️‍♂️ 需求与架构层",
+        "cmds": [
+          {
+            "cmd": "#analyze",
+            "desc": "需求分析。它会提炼出核心业务域与开发可行性。"
+          },
+          {
+            "cmd": "#analyze-code",
+            "desc": "代码逆向分析。接盘旧代码库的利器，梳理逻辑架构。"
+          },
+          {
+            "cmd": "#design",
+            "desc": "技术蓝图设计。输出技术选型与模块拆分，确保不走弯路。"
+          }
+        ]
+      },
+      {
+        "title": "💻 开发与质量层",
+        "cmds": [
+          {
+            "cmd": "#implement",
+            "desc": "代码落地。开始成片、符合规范地输出业务代码。"
+          },
+          {
+            "cmd": "#fix / #refactor",
+            "desc": "智能修复与重构。带着上下文修复特定 Bug。"
+          },
+          {
+            "cmd": "#review",
+            "desc": "代码审查。对刚写的代码进行无情抨击与漏洞排查。"
+          },
+          {
+            "cmd": "#test",
+            "desc": "单元测试生成。自动输出自动化测试脚本。"
+          }
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "titlePart1": "准备好雇佣你的 AI 技术团队了吗？",
+    "subtitle": "克隆仓库，在编辑器内打开并输入 #init 即可发号施令。",
+    "button": "在 GitHub 标星"
+  },
+  "footer": {
+    "copyright": "© 2026 My-Virtual-TechTeam. Licensed under MIT.",
+    "links": {
+      "rep": "GitHub 仓库",
+      "doc": "项目文档",
+      "issue": "报告问题"
+    }
+  }
+}
