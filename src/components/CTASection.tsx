@@ -4,7 +4,7 @@ import { Copy, Check, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTranslation } from "react-i18next"
 
-const cloneCommand = "npx degit uoyoCsharp/My-Virtual-TechTeam"
+const cloneCommand = "npx @uoyo/mvtt install"
 
 export function CTASection() {
   const ref = useRef(null)

@@ -2,6 +2,7 @@
   "nav": {
     "features": "Features",
     "workflow": "Workflow",
+    "stories": "Stories",
     "agents": "Agents",
     "architecture": "Commands",
     "github": "GitHub",
@@ -11,48 +12,52 @@
   "hero": {
     "titlePart1": "Unleash Your Potential with an ",
     "titlePart2": "AI Virtual Tech Team",
-    "subtitle": "A multi-agent collaboration framework built on prompt engineering. Break down complex software lifecycles and hand them over to your virtual Analyst, Architect, and Developer.",
+    "subtitle": "A Claude Code native framework powered by 29 mvt-* skills. Zero-copy CLI install — hand your full software lifecycle to a virtual team of Analyst, Architect, Developer, Reviewer, and Tester.",
     "quickStart": "Quick Start",
     "viewGithub": "View on GitHub",
     "terminal": {
-      "userInit": "$ #init",
-      "conductorStart": "[Conductor started] Initializing My-Virtual-TechTeam framework...",
-      "conductorParse": "[Conductor] Parsing project...",
-      "conductorContext": "[Conductor] Context is ready.",
+      "userInstall": "$ npx @uoyo/mvtt install",
+      "installLang": "? Select language: English (en-US)",
+      "installProgress": "✓ Installing MVTT v2.0.0...",
+      "installSkills": "✓ 29 skills ready at .claude/skills/",
+      "installWorkspace": "✓ Workspace initialized at .ai-agents/",
+      "userInit": "$ /mvt-init",
+      "conductorStart": "[MVTT] Initializing virtual tech team...",
+      "conductorParse": "[MVTT] Loading registry.yaml & manifest...",
       "agent1": "✓ Analyst agent activated",
       "agent2": "✓ Architect agent activated",
       "agent3": "✓ Developer agent activated",
       "agent4": "✓ Reviewer agent activated",
       "agent5": "✓ Tester agent activated",
-      "systemReady": "> System: Virtual development team assembled. Awaiting tasks...",
-      "userInput2": "$ #analyze --requirement \"User auth module\"",
+      "conductorContext": "[MVTT] Team ready. Awaiting instructions...",
+      "userInput2": "$ /mvt-analyze \"User auth module\"",
       "analyzing": "[Analyst] Analyzing requirement..."
     }
   },
   "install": {
     "title": "Start Building in Seconds",
-    "description": "Out of the box. Use npx degit to directly pull the AI virtual team scaffolding into your local workspace. Say goodbye to heavy configurations."
+    "description": "One CLI, zero copy. Run npx @uoyo/mvtt install inside any project — pick a language, pick an architecture pattern, and /mvt-init inside Claude Code."
   },
   "features": {
     "title1": "Why ",
     "title2": "My-Virtual-TechTeam",
     "title3": "?",
-    "subtitle": "Nine core capabilities that make your AI-powered development team efficient, modular, and truly platform-agnostic.",
+    "subtitle": "Nine core capabilities that make your AI-powered development team efficient, modular, and Claude Code native.",
     "items": [
       {
         "title": "Role Separation",
         "titleZh": "🎭 Clear Role Boundaries",
-        "desc": "Say goodbye to chaotic single-LLM outputs. Each Agent has a precise role and focuses on what it does best."
+        "desc": "Say goodbye to chaotic single-LLM outputs. Each agent has a precise role and focuses on what it does best."
       },
       {
-        "title": "Platform Agnostic",
-        "titleZh": "🌐 Platform Agnostic",
-        "desc": "Core framework based on pure text. Works perfectly with GitHub Copilot and planned support for Claude Code."
+        "title": "Claude Code Native",
+        "titleZh": "🌐 Claude Code Native",
+        "desc": "Built on Claude Code skills. 29 /mvt-* slash commands drop straight into your editor — no scaffolding to clone."
       },
       {
         "title": "Unified Registry",
-        "titleZh": "📂 Centralized Brain",
-        "desc": "A single registry.yaml governs all AI resources, contexts, history, and toolsets."
+        "titleZh": "📂 Install Manifest",
+        "desc": "A manifest-driven install/update/uninstall/doctor lifecycle with hash integrity checks — upgrade safely in place."
       },
       {
         "title": "Context Contract",
@@ -60,65 +65,123 @@
         "desc": "Each agent declares its prerequisites clearly to eliminate hallucinations and false inferences."
       },
       {
-        "title": "Data Tiering",
-        "titleZh": "🗄️ Hot/Warm/Cold Storage",
-        "desc": "Innovative state management optimizes enormous context windows for perfectly timed memory recall."
+        "title": "Workspace Architecture",
+        "titleZh": "🗄️ .ai-agents Workspace",
+        "desc": "Session, project-context, artifacts, knowledge, and templates live under .ai-agents/ — portable and git-friendly."
       },
       {
         "title": "Semantic Index",
         "titleZh": "🧠 Semantic Knowledge",
-        "desc": "Project specific guidelines and domain knowledge are semantically indexed and loaded on demand."
+        "desc": "Project-specific guidelines and domain knowledge are semantically indexed and loaded on demand."
       },
       {
         "title": "Semi-automatic workflows",
         "titleZh": "⚙️ Human-in-the-loop",
-        "desc": "Not completely blind automation. Developers guide the design approval before code generation starts."
+        "desc": "Not completely blind automation. Developers guide design approval before code generation starts."
       },
       {
-        "title": "Modular Skills",
-        "titleZh": "🧩 Hot-swappable Skills",
-        "desc": "Dynamically mount specific skills (e.g. specialized API usage) directly to an agent."
+        "title": "Extensible Skills",
+        "titleZh": "🧩 Grow Your Own Skills",
+        "desc": "Use /mvt-create-skill to spin up team-specific slash commands. Skills are reusable, shareable, git-committable."
       },
       {
-        "title": "Language Agnostic",
-        "titleZh": "🌍 Any Language",
-        "desc": "Whether TypeScript, Python, C#, or Rust, your AI team seamlessly adapts."
+        "title": "Multilingual Output",
+        "titleZh": "🌍 en-US / zh-CN",
+        "desc": "Pick preferences.language at install time — artifacts, reviews, and architecture docs come out in your team's language."
       }
     ]
   },
   "workflow": {
     "title": "Seamless Development Lifecycle",
-    "subtitle": "How the # directives trigger the pipeline.",
+    "subtitle": "How /mvt-* slash commands drive the pipeline.",
     "items": [
       {
         "id": "1",
-        "command": "#analyze",
+        "command": "/mvt-analyze",
         "desc1": "Extract business concepts, analyze PRD documents.",
         "desc2": "Structured requirement breakdown and acceptance criteria."
       },
       {
         "id": "2",
-        "command": "#design",
+        "command": "/mvt-design",
         "desc1": "Establish tech stack, plan system/module architecture.",
         "desc2": "Verifiable architectural blueprints and DB/API design."
       },
       {
         "id": "3",
-        "command": "#implement",
+        "command": "/mvt-implement",
         "desc1": "Implement business code according to the blueprint.",
         "desc2": "Business domain code strictly adhering to context contracts."
       },
       {
         "id": "4",
-        "command": "#review",
+        "command": "/mvt-review",
         "desc1": "Deep code dive, execute static and standard checks.",
         "desc2": "Refactoring suggestions and quality improvement reports."
       },
       {
         "id": "5",
-        "command": "#test",
+        "command": "/mvt-test",
         "desc1": "Design test cases for core business paths.",
         "desc2": "High-coverage unit/integration testing code."
+      }
+    ]
+  },
+  "stories": {
+    "title": "Real Teams, Real Workflows",
+    "subtitle": "Three ways developers put MVTT to work.",
+    "items": [
+      {
+        "icon": "🏛️",
+        "role": "Backend Engineer",
+        "title": "Inheriting a legacy codebase",
+        "scenario": "Handed an undocumented Java monolith. Two weeks to map out the domain model.",
+        "commands": [
+          "npx @uoyo/mvtt install",
+          "/mvt-analyze-code",
+          "/mvt-add-context",
+          "/mvt-status"
+        ],
+        "outcomes": [
+          "Auto-generated project-context",
+          "Module inventory and dependency map",
+          "Deliverable code walkthrough report"
+        ]
+      },
+      {
+        "icon": "🚀",
+        "role": "Full-stack Developer",
+        "title": "Starting a new project from scratch",
+        "scenario": "Building a SaaS subscription system from a PM-authored PRD.",
+        "commands": [
+          "/mvt-init (DDD pattern)",
+          "/mvt-analyze",
+          "/mvt-design",
+          "/mvt-implement",
+          "/mvt-test"
+        ],
+        "outcomes": [
+          "Cleanly layered codebase",
+          "Domain model diagrams",
+          "Automated test suite"
+        ]
+      },
+      {
+        "icon": "🧪",
+        "role": "QA Engineer",
+        "title": "Customizing test generation",
+        "scenario": "Team enforces strict Gherkin/internal templates — default /mvt-test doesn't quite fit.",
+        "commands": [
+          "/mvt-create-skill",
+          "→ define template & coverage",
+          "→ reuse knowledge/principle",
+          "/mvt-test-custom"
+        ],
+        "outcomes": [
+          "Test cases matching team spec",
+          "Reusable custom skill (git-committable)",
+          "Framework extensibility, proven"
+        ]
       }
     ]
   },
@@ -128,118 +191,99 @@
     "items": [
       {
         "name": "Conductor",
-        "role": "Dispatcher",
-        "desc": "The core dispatcher managing the task flow. Wakes up other agents.",
-        "cmds": "#init, #status, #config"
+        "role": "Workflow Orchestrator",
+        "desc": "The core dispatcher managing task flow. Initializes the team and hands work to the right agent.",
+        "cmds": "/mvt-init, /mvt-status, /mvt-config"
       },
       {
         "name": "Analyst",
         "role": "Business Expert",
         "desc": "Transforms long-form documents or messy code into solid business domain concepts.",
-        "cmds": "#analyze, #analyze-code"
+        "cmds": "/mvt-analyze, /mvt-analyze-code"
       },
       {
         "name": "Architect",
         "role": "System Designer",
         "desc": "Based on analysis, establishes the tech stack and designs strict architectural blueprints.",
-        "cmds": "#design"
+        "cmds": "/mvt-design"
       },
       {
         "name": "Developer",
         "role": "Implementer",
         "desc": "Flawlessly follows the blueprint to write elegant, production-grade code.",
-        "cmds": "#implement, #fix, #refactor"
+        "cmds": "/mvt-implement, /mvt-fix, /mvt-refactor"
       },
       {
         "name": "Reviewer",
         "role": "Quality Gatekeeper",
         "desc": "Critiques submitted code with extremely strict standards to find flaws.",
-        "cmds": "#review"
+        "cmds": "/mvt-review"
       },
       {
         "name": "Tester",
         "role": "Security Guardian",
         "desc": "Explores edge cases and builds automated testing scripts.",
-        "cmds": "#test"
+        "cmds": "/mvt-test"
       }
     ]
   },
   "commands": {
     "title": "Master Your Commands",
-    "subtitle": "Use simple # directives to interrupt or spawn an expert agent. After installation, use the following commands in GitHub Copilot or Claude Code:",
+    "subtitle": "After npx @uoyo/mvtt install, use these /mvt-* slash commands inside Claude Code.",
     "sections": [
       {
-        "title": "🚀 System & Workflow",
+        "title": "🚀 Workflow",
         "cmds": [
-          {
-            "cmd": "#init",
-            "desc": "Project initialization. Inject team structure."
-          },
-          {
-            "cmd": "#status",
-            "desc": "Check current workflow status."
-          },
-          {
-            "cmd": "#config",
-            "desc": "Modify framework configuration or LLM."
-          },
-          {
-            "cmd": "#sync-context",
-            "desc": "Force update AI workspace memory."
-          },
-          {
-            "cmd": "#cleanup",
-            "desc": "Clean up AI chat history and artifacts."
-          }
+          { "cmd": "/mvt-init", "desc": "Initialize the virtual team and project structure." },
+          { "cmd": "/mvt-status", "desc": "Check current workflow and pipeline status." },
+          { "cmd": "/mvt-help", "desc": "List all available skills and usage examples." },
+          { "cmd": "/mvt-cleanup", "desc": "Clean up chat history and stale artifacts." }
         ]
       },
       {
-        "title": "🕵️‍♂️ Analysis & Design",
+        "title": "🕵️‍♂️ Analysis",
         "cmds": [
-          {
-            "cmd": "#analyze",
-            "desc": "Requirements analysis from PRD."
-          },
-          {
-            "cmd": "#analyze-code",
-            "desc": "Reverse engineer legacy codebases."
-          },
-          {
-            "cmd": "#design",
-            "desc": "Tech blueprint and module splitting."
-          }
+          { "cmd": "/mvt-analyze", "desc": "Requirements analysis from PRD." },
+          { "cmd": "/mvt-analyze-code", "desc": "Reverse engineer legacy codebases." },
+          { "cmd": "/mvt-add-context", "desc": "Inject team conventions into project-context." },
+          { "cmd": "/mvt-sync-context", "desc": "Force-refresh workspace memory." }
         ]
       },
       {
-        "title": "💻 Implementation & Quality",
+        "title": "🏗️ Build",
         "cmds": [
-          {
-            "cmd": "#implement",
-            "desc": "Start writing business code."
-          },
-          {
-            "cmd": "#fix / #refactor",
-            "desc": "Smart fix and structural refactoring."
-          },
-          {
-            "cmd": "#review",
-            "desc": "Code review and security checks."
-          },
-          {
-            "cmd": "#test",
-            "desc": "Generate unit and edge testing."
-          }
+          { "cmd": "/mvt-design", "desc": "Tech blueprint and module splitting." },
+          { "cmd": "/mvt-implement", "desc": "Start writing business code." },
+          { "cmd": "/mvt-test", "desc": "Generate unit and integration tests." }
+        ]
+      },
+      {
+        "title": "🛡️ Quality",
+        "cmds": [
+          { "cmd": "/mvt-review", "desc": "Code review and security checks." },
+          { "cmd": "/mvt-fix", "desc": "Smart bug fix with context." },
+          { "cmd": "/mvt-refactor", "desc": "Structural refactoring." }
+        ]
+      },
+      {
+        "title": "⚙️ Config & Extend",
+        "cmds": [
+          { "cmd": "/mvt-config", "desc": "Modify framework config or LLM." },
+          { "cmd": "/mvt-template", "desc": "Manage output templates." },
+          { "cmd": "/mvt-check-context", "desc": "Validate context integrity." },
+          { "cmd": "/mvt-create-skill", "desc": "Grow your own /mvt-* skill." }
         ]
       }
     ]
   },
   "cta": {
     "titlePart1": "Ready to hire your AI Tech Team?",
-    "subtitle": "Clone the repo, open in VS Code, and type #init to start.",
+    "subtitle": "Install once, type /mvt-init in Claude Code, and your virtual team is on the job.",
     "button": "Star on GitHub"
   },
   "footer": {
     "copyright": "© 2026 My-Virtual-TechTeam. Licensed under MIT.",
+    "version": "v2.0.0 · @uoyo/mvtt",
     "links": {
       "rep": "GitHub Repo",
       "doc": "Documentation",

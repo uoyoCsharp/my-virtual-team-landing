@@ -76,17 +76,17 @@ export function ArchitectureSection() {
                 </span>
               </div>
               <div className="p-3 sm:p-4 font-mono text-[10px] sm:text-xs lg:text-sm leading-loose text-muted">
-                <span className="text-success">&gt;</span> <span className="text-foreground">#init</span><br />
-                [My-Virtual-TechTeam] initialized.<br />
-                <span className="text-success">&gt;</span> <span className="text-foreground">#analyze</span><br />
+                <span className="text-success">&gt;</span> <span className="text-foreground">/mvt-init</span><br />
+                [MVTT] Virtual team initialized.<br />
+                <span className="text-success">&gt;</span> <span className="text-foreground">/mvt-analyze</span><br />
                 [Analyst] Ready to analyze requirements...<br />
-                <span className="text-success">&gt;</span> <span className="text-foreground">#design</span><br />
+                <span className="text-success">&gt;</span> <span className="text-foreground">/mvt-design</span><br />
                 [Architect] Generating blueprint...<br />
-                <span className="text-success">&gt;</span> <span className="text-foreground">#implement</span><br />
+                <span className="text-success">&gt;</span> <span className="text-foreground">/mvt-implement</span><br />
                 [Developer] Writing code in context...<br />
-                <span className="text-success">&gt;</span> <span className="text-foreground">#review</span><br />
+                <span className="text-success">&gt;</span> <span className="text-foreground">/mvt-review</span><br />
                 [Reviewer] Reviewing code...<br />
-                <span className="text-success">&gt;</span> <span className="text-foreground">#test</span><br />
+                <span className="text-success">&gt;</span> <span className="text-foreground">/mvt-test</span><br />
                 [Tester] Generating test cases...<br />
               </div>
             </div>

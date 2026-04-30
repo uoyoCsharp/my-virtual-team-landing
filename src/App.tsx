@@ -4,6 +4,7 @@ import { FeaturesSection } from "@/components/FeaturesSection"
 import { WorkflowSection } from "@/components/WorkflowSection"
 import { AgentsSection } from "@/components/AgentsSection"
 import { ArchitectureSection } from "@/components/ArchitectureSection"
+import { StoriesSection } from "@/components/StoriesSection"
 import { CTASection } from "@/components/CTASection"
 import { Footer } from "@/components/Footer"
 
@@ -16,6 +17,7 @@ function App() {
         <FeaturesSection />
         <WorkflowSection />
         <AgentsSection />
+        <StoriesSection />
         <ArchitectureSection />
         <CTASection />
       </main>

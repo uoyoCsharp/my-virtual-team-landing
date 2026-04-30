@@ -10,19 +10,23 @@ function TerminalAnimation() {
   const { t } = useTranslation()
 
   const terminalLines = [
-    { type: "input" as const, text: t("hero.terminal.userInit", "$ #init") },
-    { type: "output" as const, text: t("hero.terminal.conductorStart", "[Conductor] Initializing virtual tech team...") },
-    { type: "output" as const, text: t("hero.terminal.conductorParse", "[Conductor] Loading registry.yaml...") },
+    { type: "input" as const, text: t("hero.terminal.userInstall", "$ npx @uoyo/mvtt install") },
+    { type: "output" as const, text: t("hero.terminal.installLang", "? Select language: English (en-US)") },
+    { type: "success" as const, text: t("hero.terminal.installProgress", "✓ Installing MVTT v2.0.0...") },
+    { type: "success" as const, text: t("hero.terminal.installSkills", "✓ 29 skills ready at .claude/skills/") },
+    { type: "success" as const, text: t("hero.terminal.installWorkspace", "✓ Workspace initialized at .ai-agents/") },
     { type: "output" as const, text: "" },
+    { type: "input" as const, text: t("hero.terminal.userInit", "$ /mvt-init") },
+    { type: "output" as const, text: t("hero.terminal.conductorStart", "[MVTT] Initializing virtual tech team...") },
+    { type: "output" as const, text: t("hero.terminal.conductorParse", "[MVTT] Loading registry.yaml & manifest...") },
     { type: "success" as const, text: t("hero.terminal.agent1", "✓ Analyst agent activated") },
     { type: "success" as const, text: t("hero.terminal.agent2", "✓ Architect agent activated") },
     { type: "success" as const, text: t("hero.terminal.agent3", "✓ Developer agent activated") },
     { type: "success" as const, text: t("hero.terminal.agent4", "✓ Reviewer agent activated") },
     { type: "success" as const, text: t("hero.terminal.agent5", "✓ Tester agent activated") },
-    { type: "output" as const, text: "" },
-    { type: "output" as const, text: t("hero.terminal.conductorContext", "[Conductor] Team is ready. Awaiting instructions...") },
-    { type: "input" as const, text: t("hero.terminal.userInput2", "$ #analyze --requirement \"User auth module\"") },
-    { type: "output" as const, text: t("hero.terminal.systemReady", "[Analyst] Analyzing requirement...") },
+    { type: "output" as const, text: t("hero.terminal.conductorContext", "[MVTT] Team ready. Awaiting instructions...") },
+    { type: "input" as const, text: t("hero.terminal.userInput2", "$ /mvt-analyze \"User auth module\"") },
+    { type: "output" as const, text: t("hero.terminal.analyzing", "[Analyst] Analyzing requirement...") },
   ]
 
   const [visibleLines, setVisibleLines] = useState<number>(0)
@@ -129,7 +133,7 @@ export function HeroSection() {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("npx degit uoyoCsharp/My-Virtual-TechTeam")
+    navigator.clipboard.writeText("npx @uoyo/mvtt install")
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -189,7 +193,7 @@ export function HeroSection() {
             transition={{ delay: 1.2, duration: 0.6 }}
             className="text-sm sm:text-base lg:text-lg text-muted max-w-xl mb-4 sm:mb-6 lg:mb-8 leading-relaxed mx-auto lg:mx-0"
           >
-            {t("hero.subtitle", "基于提示词工程构建的多架构 AI Agent 框架。将复杂的软件开发生命周期交由虚拟的 Analyst, Architect 和 Developer 协作完成。")}
+            {t("hero.subtitle", "A Claude Code native framework powered by 29 /mvt-* skills. Zero-copy CLI install — hand your full software lifecycle to a virtual team of Analyst, Architect, Developer, Reviewer, and Tester.")}
           </motion.p>
 
           <motion.div
@@ -231,11 +235,11 @@ export function HeroSection() {
               <span className="text-xs sm:text-sm text-foreground font-medium">{t("install.title", "Start Building in Seconds")}</span>
             </div>
             <p className="text-[10px] sm:text-xs text-muted mb-2 sm:mb-3 hidden sm:block">
-              {t("install.description", "Out of the box. Use npx degit to directly pull the AI virtual team scaffolding.")}
+              {t("install.description", "One CLI, zero copy. Run inside any project — then /mvt-init in Claude Code.")}
             </p>
             <div className="flex items-center gap-2 bg-black/40 p-2 sm:p-3 rounded-md sm:rounded-lg border border-white/5 relative">
               <code className="text-[10px] sm:text-xs font-mono text-primary flex-1 overflow-x-auto whitespace-nowrap scrollbar-hide">
-                npx degit uoyoCsharp/My-Virtual-TechTeam
+                npx @uoyo/mvtt install
               </code>
               <button
                 onClick={handleCopy}

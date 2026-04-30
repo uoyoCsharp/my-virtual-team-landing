@@ -6,7 +6,18 @@ export function Footer() {
   return (
     <footer className="border-t border-white/[0.06] bg-background">
       <div className="mx-auto max-w-7xl px-6 py-8 sm:py-12 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
-        <Logo className="scale-90 sm:scale-100" />
+        <div className="flex items-center gap-3">
+          <Logo className="scale-90 sm:scale-100" />
+          <a
+            href="https://www.npmjs.com/package/@uoyo/mvtt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-primary/10 border border-primary/20 text-[10px] sm:text-xs font-mono text-primary hover:border-primary/40 transition-colors"
+            title="@uoyo/mvtt on npm"
+          >
+            {t("footer.version", "v2.0.0 · @uoyo/mvtt")}
+          </a>
+        </div>
         <p className="text-xs sm:text-sm text-muted text-center">{t("footer.copyright")}</p>
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
           <a href="https://github.com/uoyoCsharp/My-Virtual-TechTeam" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted hover:text-foreground transition-colors">{t("footer.links.rep")}</a>

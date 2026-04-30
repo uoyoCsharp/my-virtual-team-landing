@@ -15,6 +15,7 @@ export function Navbar() {
     { label: t("nav.features"), href: "#features" },
     { label: t("nav.workflow"), href: "#workflow" },
     { label: t("nav.agents"), href: "#agents" },
+    { label: t("nav.stories"), href: "#stories" },
     { label: t("nav.architecture"), href: "#architecture" },
   ]
 
