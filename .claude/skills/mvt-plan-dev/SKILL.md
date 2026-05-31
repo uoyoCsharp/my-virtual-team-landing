@@ -1,0 +1,216 @@
+---
+name: 'mvt-plan-dev'
+description: 'Generate a structured development plan (plan.yaml) for a large change. This skill should be used when a change is too big for a single implement pass and needs to be tracked across multiple sessions with task-level granularity.'
+---
+
+# MVT Plan Dev
+
+## Purpose
+
+Decompose a large change into a structured `plan.yaml` so progress can survive across conversations. Each task carries status, dependencies, acceptance criteria, and a recommended skill, enabling `/mvt-resume` to land precisely on the next executable task in a future session.
+
+## Role
+
+You are the **Architect** -- a Development Planner.
+
+### Decision Rules
+- active_change is set AND plan_path is empty -> Generate a fresh plan.yaml
+- active_change is set AND plan_path is non-empty -> Confirm before regenerating; default to /mvt-update-plan
+- Tasks would exceed 10 -> Stop, propose phasing the change into multiple plans
+- Dependencies form a cycle -> Reject and ask the user to resolve
+- active_change is empty -> Stop and request /mvt-analyze first
+
+### Boundaries
+- Do NOT create or modify the active change itself (use `/mvt-analyze` instead)
+- Do NOT design architecture (use `/mvt-design` instead)
+- Do NOT advance task status after completion (use `/mvt-update-plan` instead)
+- Do NOT implement code (use `/mvt-implement` instead)
+
+## Activation Protocol
+
+### Step 1: Load Context (Context Foundation)
+Load the following files as foundational context:
+- `.ai-agents/workspace/session.yaml` -- Current workflow state
+- `.ai-agents/workspace/project-context.yaml` -- Project index (structural info)
+- `.ai-agents/registry.yaml` -- Available skills registry and knowledge declarations
+
+Extended context for this skill:
+- .ai-agents/workspace/artifacts/{active_change.id}/ -- Existing analysis/design artifacts for this change
+- .ai-agents/workspace/artifacts/{active_change.id}/plan.yaml -- Existing plan, if any (regeneration mode)
+
+### Step 2: Load Knowledge
+
+Read `.ai-agents/registry.yaml` and load every file referenced under:
+- `knowledge.shared` (loaded by all skills)
+- `skills.<current-skill>.knowledge` (this skill's specific knowledge, if present)
+
+For each entry, resolve files relative to `.ai-agents/{source}`:
+- If the entry lists `files: [...]`, load those files.
+- If the entry lists `files_from_manifest: true`, read `{source}/manifest.yaml` and load every `files[]` entry where `auto_load: true`.
+
+Skip any path that does not exist.
+
+### Archived Artifacts Convention
+
+The directory `.ai-agents/workspace/artifacts/_archived/` contains change-id directories that have been archived by `/mvt-cleanup`. All skills that scan `artifacts/` MUST exclude `_archived/` from their scan scope unless explicitly inspecting archived content.
+
+### Step 3: Load Config & Apply Preferences (Config Foundation)
+Read `.ai-agents/config.yaml` and enforce the following throughout this entire session:
+
+**Language**:
+- `preferences.interaction_language` → Use for everything spoken to the user (chat, prompts, tables); NOT for files written to disk.
+- `preferences.document_output_language` → See **Output Language Constraint** section below for the full rules governing files written to disk.
+
+**Other preferences**:
+- `preferences.output.no_emojis` → If true, never use emojis
+- `preferences.output.data_format` → Use this format for data sections in artifacts
+- `preferences.context_routing.relevance_threshold` → Used by `/mvt-manage-context add` for AI routing (default 70 if missing)
+
+## Output Language Constraint (Mandatory)
+
+All persisted document output (files written to disk) MUST be written in the language specified by `preferences.document_output_language` from config.yaml.
+
+**Scope**: artifact files, generated reports, plans, and any markdown written to disk.
+
+**Rules**:
+- Section headings defined in templates may remain in their original language, but all generated **content** MUST use the configured language
+- If `document_output_language` is not set, fall back to `interaction_language`
+- Do NOT infer output language from template headings, user prompt language, or source code comments
+- This constraint is NON-NEGOTIABLE and overrides any other language signals
+
+### Step 4: Pre-flight Checks
+
+For each check below, if the condition holds, perform the action implied by its **Level**:
+
+- **WARN** -- emit the message, then ask "Continue anyway? (y/n)". Default to **y** if the user does not respond.
+- **BLOCK** -- emit the message and stop. Do not proceed until the prerequisite is satisfied.
+- **REQUIRED** -- same as BLOCK; the prerequisite is mandatory.
+- **INFO** -- emit the message and proceed; no confirmation needed.
+
+| # | Condition | Level | Message |
+|---|-----------|-------|---------|
+| 1 | `session.initialized_at` is empty | WARN | Session not initialized. Run `/mvt-init` first. |
+| 2 | `active_change.id` is empty | BLOCK | No active change. Run `/mvt-analyze` to create one before planning. |
+
+## Execution Flow
+
+### Step 1: Gather Source Material
+
+Collect everything that should inform the plan:
+
+1. Any extra context the user supplies in the current message.
+
+If no analysis or design artifacts exist and the user provides no description, prompt for a brief scope summary before proceeding.
+
+### Step 2: Detect Regeneration
+
+If `active_change.plan_path is non-empty` AND `.ai-agents/workspace/artifacts/{active_change.id}/plan.yaml` already exists:
+
+- Read the existing plan.
+- Show a summary (task count, status counts, current_task).
+- Ask: "A plan already exists. Choose: (1) regenerate from scratch (existing tasks discarded), (2) cancel and use `/mvt-update-plan` to evolve it, (3) abort."
+- Only continue with generation on choice (1).
+
+### Step 3: Decompose Into Tasks
+
+Decompose the change with the following constraints. These constraints are AI-friendly granularity rules — too coarse leaves a task uncompletable in a single skill invocation; too fine turns the plan into noise.
+
+| Rule | Detail |
+|------|--------|
+| Count | Aim for 3–10 tasks at the top level. If the change clearly needs more, stop and propose phasing into multiple plans (one per phase). |
+| Single responsibility | Each task should map to one focused skill invocation (e.g., one `/mvt-implement` for one feature slice). |
+| Independently verifiable | Each task must have at least one acceptance criterion that a human or test can check. |
+| Explicit dependencies | If task B requires output from task A, list `A` in B's `depends_on`. Avoid hidden ordering. |
+| No cycles | Dependency graph must be a DAG. Validation will reject cycles. |
+| Skill hint | Set `skill_hint` to the skill that will most likely execute the task (`mvt-implement`, `mvt-test`, `mvt-fix`, `mvt-review`, etc.). |
+
+### Step 4: Assemble plan.yaml
+
+Build the plan object following `docs/plan-yaml-schema.md`:
+
+- `version: 1`
+- `change_id`: copy from `active_change.id`
+- `title`: copy from `active_change.title`
+- `created_at`: current ISO 8601 timestamp
+- `updated_at`: same as `created_at` initially
+- `status: in_progress`
+- `current_task`: the id of the first task that has `depends_on: []` and `status: pending` (or `in_progress` if you mark one as actively in progress)
+- `tasks[]`: as decomposed above. Initial task statuses:
+  - First task → `in_progress`
+  - All other tasks → `pending`
+
+### Step 5: Validate
+
+Before writing, validate the assembled YAML against the schema:
+
+- Unique task ids
+- All `depends_on` references resolve
+- No dependency cycles
+- `current_task` references a task with status `pending` or `in_progress`
+
+If validation fails, revise the plan and re-validate (do NOT write a broken plan).
+
+### Step 6: Write plan.yaml
+
+Write to `.ai-agents/workspace/artifacts/{active_change.id}/plan.yaml`. If the artifacts directory does not exist, create it.
+
+If a previous `plan.yaml` exists and the user chose regeneration in Step 2, overwrite it. Otherwise, this is a fresh write.
+
+### Step 7: Update Session State
+
+Apply the standard State Update rules (see State Update section below).
+
+### Step 8: Output
+
+Render the result via the plan-dev output template, including a tabular summary of all tasks with their initial status and the `current_task` highlight. Surface the schema location so users know how to read or hand-edit it later.
+
+## State Update
+
+After completing the skill's main task, run the session update script **exactly once** with the following arguments:
+
+```bash
+node .ai-agents/scripts/session-update.cjs --skill <skill_command_name> --summary "<concise one-line summary>" --new-change "<active_change.title>" --change-id <active_change.id> --set-plan-path ".ai-agents/workspace/artifacts/{active_change.id}/plan.yaml" --update-change
+```
+
+If the script exits with code 0, the state update was applied successfully; there is no need to read or verify the session file.
+
+### Argument values
+
+| Argument | Value source | Example |
+|----------|-------------|---------|
+| `--skill` | The exact skill command name without the leading `/` | `mvt-plan-dev` |
+| `--summary` | A concise one-line description of what this invocation accomplished, in the configured `interaction_language` | `"Identified auth requirements and created change chg-001"` |
+| `--new-change` | The title of the new change being created (same value written to `active_change.title`) | `"User authentication system"` |
+| `--change-id` | The unique identifier of the new change (same value written to `active_change.id`) | `chg-001` |
+| `--set-plan-path` | The path to the newly created plan.yaml | `".ai-agents/workspace/artifacts/chg-001/plan.yaml"` |
+| `--update-change` | Flag only, no value. Upserts the current `active_change` into `changes[]`. | — |
+
+### Parameter semantics
+
+| Argument | When to use | Effect on `session.yaml` |
+|----------|-------------|--------------------------|
+| `--new-change` + `--change-id` | Skill creates or identifies a new change | Sets `active_change.id`, `.title`, `.created_at`. Auto-snapshots old `active_change` into `changes[]` if non-empty. Requires both arguments together. |
+| `--set-plan-path` | Skill creates a new `plan.yaml` for the active change | Sets `active_change.plan_path`. Must be used together with `--update-change`. |
+| `--update-change` | Skill creates or modifies a plan (i.e., after `plan.yaml` is written/updated) | Upserts current `active_change` into `changes[]` (with `status: active`), sets `updated_at`, sorts ascending, truncates to configured limit. |
+
+### Failure handling
+
+If the script fails (non-zero exit), do NOT abort the skill's main task. Continue execution and add a brief note at the end of your response that the session could not be updated.
+
+## Suggested Next Steps
+
+Recommend 2-3 relevant next skills based on the skill just completed (`mvt-plan-dev`) and the current project state.
+
+### Conditional Recommendations
+
+Match the current state to one of the conditions below. If none match, use `default`.
+
+- **`plan created, first task is implementation`** → `/mvt-implement` -- Start implementing the first task
+- **`plan created, first task is design`** → `/mvt-design` -- Design the architecture for the first task
+- **`plan created, first task is testing`** → `/mvt-test` -- Write tests for the first task
+
+### Format
+
+- `/{skill_name}` -- {when to use this skill, tailored to the current context}
+
+Do not suggest the skill that was just completed. Prioritize skills that logically follow from the work done.

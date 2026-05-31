@@ -1,0 +1,4082 @@
+{
+  "version": "2.13",
+  "children": [
+    {
+      "type": "frame",
+      "id": "XiSbf",
+      "x": 0,
+      "y": 0,
+      "name": "MVTT Website",
+      "clip": true,
+      "width": 1440,
+      "fill": "$bg-primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "rWFIt",
+          "name": "Nav Bar",
+          "width": "fill_container",
+          "height": 64,
+          "padding": [
+            0,
+            60
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "IOZg8",
+              "name": "Nav Left",
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "F5gBy",
+                  "name": "Logo",
+                  "fill": "$text-primary",
+                  "content": "MVTT",
+                  "fontFamily": "Geist",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "yfMRJ",
+                  "name": "Nav Features",
+                  "fill": "$text-secondary",
+                  "content": "Features",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "b4lNtD",
+                  "name": "Nav Workflow",
+                  "fill": "$text-secondary",
+                  "content": "Workflow",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "C7YQI",
+                  "name": "Nav Agents",
+                  "fill": "$text-secondary",
+                  "content": "Agents",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "kJLDp",
+                  "name": "Nav Stories",
+                  "fill": "$text-secondary",
+                  "content": "Stories",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "PFErF",
+                  "name": "Nav Commands",
+                  "fill": "$text-secondary",
+                  "content": "Commands",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B184k",
+              "name": "Nav Right",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "Qt464",
+                  "name": "GitHub Icon",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "github",
+                  "library": "lucide",
+                  "fill": "$text-secondary"
+                },
+                {
+                  "type": "frame",
+                  "id": "qx0i0",
+                  "name": "Nav CTA",
+                  "fill": "$accent-indigo",
+                  "cornerRadius": 8,
+                  "padding": [
+                    8,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "oijLs",
+                      "name": "Nav CTA Label",
+                      "fill": "#FFFFFF",
+                      "content": "Get Started",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "C87Ikc",
+          "name": "Hero Section",
+          "width": "fill_container",
+          "height": 720,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1.2,
+              "height": 0.8
+            },
+            "colors": [
+              {
+                "color": "#6366F126",
+                "position": 0
+              },
+              {
+                "color": "#8B5CF610",
+                "position": 0.4
+              },
+              {
+                "color": "#0A0A0F00",
+                "position": 0.8
+              }
+            ],
+            "center": {
+              "y": 1
+            }
+          },
+          "layout": "vertical",
+          "gap": 32,
+          "padding": [
+            0,
+            60
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "zri4v",
+              "name": "Status Badge",
+              "cornerRadius": 20,
+              "stroke": "$border-subtle",
+              "strokeWidth": 1,
+              "gap": 8,
+              "padding": [
+                6,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "IIdYa",
+                  "name": "Pulse Dot",
+                  "fill": "$accent-green",
+                  "width": 8,
+                  "height": 8
+                },
+                {
+                  "type": "text",
+                  "id": "QY8Fm",
+                  "name": "Badge Text",
+                  "fill": "$text-secondary",
+                  "content": "Built for Claude Code",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xPVq0",
+              "name": "Title Group",
+              "layout": "vertical",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NdjTh",
+                  "name": "Title Line 1",
+                  "fill": "$text-primary",
+                  "content": "Your AI Dev Team,",
+                  "fontFamily": "Geist",
+                  "fontSize": 72,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "LaXgq",
+                  "name": "Title Line 2",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 135,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#6366F1",
+                        "position": 0
+                      },
+                      {
+                        "color": "#A78BFA",
+                        "position": 0.5
+                      },
+                      {
+                        "color": "#22D3EE",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "content": "One Command Away.",
+                  "fontFamily": "Geist",
+                  "fontSize": 72,
+                  "fontWeight": "800"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "zGEgJ",
+              "name": "Subtitle",
+              "fill": "$text-secondary",
+              "content": "29 个 AI 技能驱动的虚拟开发团队 — 分析 · 设计 · 实现 · 评审 · 测试",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "m1BVa",
+              "name": "Install Box",
+              "fill": "$bg-surface",
+              "cornerRadius": 8,
+              "stroke": "$border-hover",
+              "strokeWidth": 1,
+              "gap": 12,
+              "padding": [
+                14,
+                24
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "w6cyN",
+                  "name": "Dollar Sign",
+                  "fill": "$accent-cyan",
+                  "content": "$",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "r4m7OQ",
+                  "name": "Install Cmd",
+                  "fill": "$text-primary",
+                  "content": "npx @uoyo/mvtt install",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon",
+                  "id": "EWjEE",
+                  "name": "Copy Icon",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "copy",
+                  "library": "lucide",
+                  "fill": "$text-tertiary"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Cmo0m",
+              "name": "CTA Group",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VxAOj",
+                  "name": "CTA Primary",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 135,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#6366F1",
+                        "position": 0
+                      },
+                      {
+                        "color": "#8B5CF6",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 8,
+                  "padding": [
+                    14,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mzBos",
+                      "name": "CTA Primary Label",
+                      "fill": "#FFFFFF",
+                      "content": "Quick Start",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RUf8Q",
+                  "name": "CTA Secondary",
+                  "cornerRadius": 8,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "padding": [
+                    14,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Etg6x",
+                      "name": "CTA Secondary Label",
+                      "fill": "$text-primary",
+                      "content": "View on GitHub",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ROIQ4",
+          "name": "Stats Bar",
+          "width": "fill_container",
+          "fill": "$bg-surface",
+          "stroke": "$border-subtle",
+          "strokeWidth": {
+            "top": 1,
+            "bottom": 1
+          },
+          "padding": [
+            40,
+            120
+          ],
+          "justifyContent": "space_around",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "JcOX5",
+              "name": "Stat 1",
+              "layout": "vertical",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Io5Y5",
+                  "name": "Stat 1 Number",
+                  "fill": "$text-primary",
+                  "content": "29+",
+                  "fontFamily": "Geist",
+                  "fontSize": 40,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "UjNlM",
+                  "name": "Stat 1 Label",
+                  "fill": "$text-secondary",
+                  "content": "AI Skills",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TV3D4",
+              "name": "Stat 2",
+              "layout": "vertical",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TMinE",
+                  "name": "Stat 2 Number",
+                  "fill": "$text-primary",
+                  "content": "5",
+                  "fontFamily": "Geist",
+                  "fontSize": 40,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "cEC8i",
+                  "name": "Stat 2 Label",
+                  "fill": "$text-secondary",
+                  "content": "Specialist Agents",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "N7Jvo",
+              "name": "Stat 3",
+              "layout": "vertical",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ris96",
+                  "name": "Stat 3 Number",
+                  "fill": "$text-primary",
+                  "content": "<30s",
+                  "fontFamily": "Geist",
+                  "fontSize": 40,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "lH5nf",
+                  "name": "Stat 3 Label",
+                  "fill": "$text-secondary",
+                  "content": "Setup Time",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fQfOO",
+              "name": "Stat 4",
+              "layout": "vertical",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ghn89",
+                  "name": "Stat 4 Number",
+                  "fill": "$text-primary",
+                  "content": "en/zh",
+                  "fontFamily": "Geist",
+                  "fontSize": 40,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "ifZy0",
+                  "name": "Stat 4 Label",
+                  "fill": "$text-secondary",
+                  "content": "Multilingual Output",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "D2T843",
+          "name": "Features Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 64,
+          "padding": [
+            100,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "sk2pj",
+              "name": "Features Header",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "abv4F",
+                  "name": "Features Eyebrow",
+                  "fill": "$accent-indigo",
+                  "content": "CORE CAPABILITIES",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "pTdEU",
+                  "name": "Features Title",
+                  "fill": "$text-primary",
+                  "content": "Why My-Virtual-TechTeam?",
+                  "fontFamily": "Geist",
+                  "fontSize": 44,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "mFr8M",
+                  "name": "Features Desc",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 600,
+                  "content": "Nine core capabilities that make your AI-powered development team efficient, modular, and Claude Code native.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SjWMf",
+              "name": "Group Architecture",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sqDpW",
+                  "name": "Group 1 Label",
+                  "fill": "$accent-purple",
+                  "content": "Architecture Philosophy",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "500",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "frame",
+                  "id": "c81HSu",
+                  "name": "Row 1",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "mURWf",
+                      "name": "Card Role Sep",
+                      "width": "fill_container",
+                      "fill": "$bg-surface",
+                      "cornerRadius": 12,
+                      "stroke": "$border-subtle",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "ZBbOM",
+                          "name": "Card1 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "users",
+                          "library": "lucide",
+                          "fill": "$accent-indigo"
+                        },
+                        {
+                          "type": "text",
+                          "id": "D9eS8u",
+                          "name": "Card1 Title",
+                          "fill": "$text-primary",
+                          "content": "Role Separation",
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "EYpDw",
+                          "name": "Card1 Desc",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Each agent has a precise role and focuses on what it does best.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "tiBw8",
+                      "name": "Card Context",
+                      "width": "fill_container",
+                      "fill": "$bg-surface",
+                      "cornerRadius": 12,
+                      "stroke": "$border-subtle",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "IIoFj",
+                          "name": "Card2 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "handshake",
+                          "library": "lucide",
+                          "fill": "$accent-indigo"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JebdQ",
+                          "name": "Card2 Title",
+                          "fill": "$text-primary",
+                          "content": "Context Contract",
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "q8czrf",
+                          "name": "Card2 Desc",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Each agent declares its prerequisites clearly to eliminate hallucinations.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kijsh",
+                      "name": "Card Workspace",
+                      "width": "fill_container",
+                      "fill": "$bg-surface",
+                      "cornerRadius": 12,
+                      "stroke": "$border-subtle",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "uePRM",
+                          "name": "Card3 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "folder-tree",
+                          "library": "lucide",
+                          "fill": "$accent-indigo"
+                        },
+                        {
+                          "type": "text",
+                          "id": "v5rhU",
+                          "name": "Card3 Title",
+                          "fill": "$text-primary",
+                          "content": "Workspace Architecture",
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "lpT9y",
+                          "name": "Card3 Desc",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": ".ai-agents/ workspace — portable, git-friendly, and fully version controlled.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PVe0Q",
+              "name": "Group Platform",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "d3Top",
+                  "name": "Group 2 Label",
+                  "fill": "$accent-cyan",
+                  "content": "Platform Capabilities",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "500",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "frame",
+                  "id": "B38PUw",
+                  "name": "Row 2",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "C0PCjo",
+                      "name": "Card Claude",
+                      "width": "fill_container",
+                      "fill": "$bg-surface",
+                      "cornerRadius": 12,
+                      "stroke": "$border-subtle",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "S5MKA",
+                          "name": "Card4 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "terminal",
+                          "library": "lucide",
+                          "fill": "$accent-cyan"
+                        },
+                        {
+                          "type": "text",
+                          "id": "i34UZC",
+                          "name": "Card4 Title",
+                          "fill": "$text-primary",
+                          "content": "Claude Code Native",
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OqHSD",
+                          "name": "Card4 Desc",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Built on Claude Code skills. 29 /mvt-* slash commands drop straight into your editor.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CQ0ZK",
+                      "name": "Card Manifest",
+                      "width": "fill_container",
+                      "fill": "$bg-surface",
+                      "cornerRadius": 12,
+                      "stroke": "$border-subtle",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "S1KEA5",
+                          "name": "Card5 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "file-check",
+                          "library": "lucide",
+                          "fill": "$accent-cyan"
+                        },
+                        {
+                          "type": "text",
+                          "id": "c05MqX",
+                          "name": "Card5 Title",
+                          "fill": "$text-primary",
+                          "content": "Install Manifest",
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wP3ak",
+                          "name": "Card5 Desc",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Manifest-driven install/update/uninstall/doctor lifecycle with hash integrity checks.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jIeFS",
+                      "name": "Card Knowledge",
+                      "width": "fill_container",
+                      "fill": "$bg-surface",
+                      "cornerRadius": 12,
+                      "stroke": "$border-subtle",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "BAFMe",
+                          "name": "Card6 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "brain",
+                          "library": "lucide",
+                          "fill": "$accent-cyan"
+                        },
+                        {
+                          "type": "text",
+                          "id": "VmxHv",
+                          "name": "Card6 Title",
+                          "fill": "$text-primary",
+                          "content": "Semantic Knowledge",
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "iKUUj",
+                          "name": "Card6 Desc",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Project-specific guidelines and domain knowledge are semantically indexed and loaded on demand.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "i45JH",
+              "name": "Group Extensibility",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ueb90",
+                  "name": "Group 3 Label",
+                  "fill": "$accent-green",
+                  "content": "Extensibility",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "500",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "frame",
+                  "id": "ThV6v",
+                  "name": "Row 3",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xR0lE",
+                      "name": "Card HITL",
+                      "width": "fill_container",
+                      "fill": "$bg-surface",
+                      "cornerRadius": 12,
+                      "stroke": "$border-subtle",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "pTDjG",
+                          "name": "Card7 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "settings-2",
+                          "library": "lucide",
+                          "fill": "$accent-green"
+                        },
+                        {
+                          "type": "text",
+                          "id": "RLkrd",
+                          "name": "Card7 Title",
+                          "fill": "$text-primary",
+                          "content": "Human-in-the-Loop",
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "m0orwI",
+                          "name": "Card7 Desc",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Not blind automation. Developers guide design approval before code generation starts.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YE6gc",
+                      "name": "Card Custom",
+                      "width": "fill_container",
+                      "fill": "$bg-surface",
+                      "cornerRadius": 12,
+                      "stroke": "$border-subtle",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "Mz7pc",
+                          "name": "Card8 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "puzzle",
+                          "library": "lucide",
+                          "fill": "$accent-green"
+                        },
+                        {
+                          "type": "text",
+                          "id": "BuJJD",
+                          "name": "Card8 Title",
+                          "fill": "$text-primary",
+                          "content": "Extensible Skills",
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "H6V8q",
+                          "name": "Card8 Desc",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Use /mvt-create-skill to spin up team-specific slash commands. Reusable and shareable.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cPIqV",
+                      "name": "Card Multilingual",
+                      "width": "fill_container",
+                      "fill": "$bg-surface",
+                      "cornerRadius": 12,
+                      "stroke": "$border-subtle",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 28,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "Q85k5e",
+                          "name": "Card9 Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "globe",
+                          "library": "lucide",
+                          "fill": "$accent-green"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ONVxJ",
+                          "name": "Card9 Title",
+                          "fill": "$text-primary",
+                          "content": "Multilingual Output",
+                          "fontFamily": "Geist",
+                          "fontSize": 18,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "lF2yL",
+                          "name": "Card9 Desc",
+                          "fill": "$text-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Pick your language at install — artifacts, reviews, and docs come out in en-US or zh-CN.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tlEk9",
+          "name": "Workflow Section",
+          "width": "fill_container",
+          "fill": "$bg-surface",
+          "layout": "vertical",
+          "gap": 64,
+          "padding": [
+            100,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "nYGEi",
+              "name": "Workflow Header",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VEf0x",
+                  "name": "Workflow Eyebrow",
+                  "fill": "$accent-indigo",
+                  "content": "DEVELOPMENT LIFECYCLE",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "tAnlW",
+                  "name": "Workflow Title",
+                  "fill": "$text-primary",
+                  "content": "Seamless Development Pipeline",
+                  "fontFamily": "Geist",
+                  "fontSize": 44,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "kuYly",
+                  "name": "Workflow Desc",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 500,
+                  "content": "How /mvt-* slash commands drive the entire software development pipeline.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "t7l2e",
+              "name": "Pipeline Steps",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "CJluT",
+                  "name": "Step 1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "S0GBrP",
+                      "name": "Step 1 Circle",
+                      "width": 56,
+                      "height": 56,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#3B82F6",
+                            "position": 0
+                          },
+                          {
+                            "color": "#60A5FA",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 28,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Mx5QD",
+                          "name": "Step 1 Num",
+                          "fill": "#FFFFFF",
+                          "content": "1",
+                          "fontFamily": "Geist",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "SfU90",
+                      "name": "Step 1 Cmd",
+                      "fill": "$accent-blue",
+                      "content": "/mvt-analyze",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MMh3S",
+                      "name": "Step 1 Role",
+                      "fill": "$text-primary",
+                      "content": "Analyst",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Nty8m",
+                      "name": "Step 1 Desc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Extract business concepts\nand analyze PRD documents",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZCZfN",
+                  "name": "Step 2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "m6wz0P",
+                      "name": "Step 2 Circle",
+                      "width": 56,
+                      "height": 56,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#8B5CF6",
+                            "position": 0
+                          },
+                          {
+                            "color": "#A78BFA",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 28,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "G3TraO",
+                          "name": "Step 2 Num",
+                          "fill": "#FFFFFF",
+                          "content": "2",
+                          "fontFamily": "Geist",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "OEl4r",
+                      "name": "Step 2 Cmd",
+                      "fill": "$accent-purple",
+                      "content": "/mvt-design",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rRmFh",
+                      "name": "Step 2 Role",
+                      "fill": "$text-primary",
+                      "content": "Architect",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "I4ejoE",
+                      "name": "Step 2 Desc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Establish tech stack and\ndesign system architecture",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "e7T5U",
+                  "name": "Step 3",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "QzC33",
+                      "name": "Step 3 Circle",
+                      "width": 56,
+                      "height": 56,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#10B981",
+                            "position": 0
+                          },
+                          {
+                            "color": "#34D399",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 28,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "j3EoCz",
+                          "name": "Step 3 Num",
+                          "fill": "#FFFFFF",
+                          "content": "3",
+                          "fontFamily": "Geist",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "eHfNK",
+                      "name": "Step 3 Cmd",
+                      "fill": "$accent-green",
+                      "content": "/mvt-implement",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "y9Sbv",
+                      "name": "Step 3 Role",
+                      "fill": "$text-primary",
+                      "content": "Developer",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ceewg",
+                      "name": "Step 3 Desc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Implement business code\nfollowing the blueprint",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WgEYF",
+                  "name": "Step 4",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "llvJJ",
+                      "name": "Step 4 Circle",
+                      "width": 56,
+                      "height": 56,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#F59E0B",
+                            "position": 0
+                          },
+                          {
+                            "color": "#FBBF24",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 28,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "X1j3Z",
+                          "name": "Step 4 Num",
+                          "fill": "#FFFFFF",
+                          "content": "4",
+                          "fontFamily": "Geist",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "f21Pz3",
+                      "name": "Step 4 Cmd",
+                      "fill": "$accent-orange",
+                      "content": "/mvt-review",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "h8G10",
+                      "name": "Step 4 Role",
+                      "fill": "$text-primary",
+                      "content": "Reviewer",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oRcPy",
+                      "name": "Step 4 Desc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Deep code dive, execute\nstatic and standard checks",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NESBR",
+                  "name": "Step 5",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "mSNaM",
+                      "name": "Step 5 Circle",
+                      "width": 56,
+                      "height": 56,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#22D3EE",
+                            "position": 0
+                          },
+                          {
+                            "color": "#67E8F9",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 28,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Uotsg",
+                          "name": "Step 5 Num",
+                          "fill": "#FFFFFF",
+                          "content": "5",
+                          "fontFamily": "Geist",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "UEh6I",
+                      "name": "Step 5 Cmd",
+                      "fill": "$accent-cyan",
+                      "content": "/mvt-test",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ht9Ib",
+                      "name": "Step 5 Role",
+                      "fill": "$text-primary",
+                      "content": "Tester",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HTw6w",
+                      "name": "Step 5 Desc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 160,
+                      "content": "Design test cases for\ncore business paths",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fs6gp",
+              "name": "Terminal Preview",
+              "clip": true,
+              "width": 800,
+              "fill": "#0D0D14",
+              "cornerRadius": 12,
+              "stroke": "$border-subtle",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "UTu3r",
+                  "name": "Terminal Bar",
+                  "width": "fill_container",
+                  "height": 36,
+                  "fill": "#161622",
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "KtNIS",
+                      "name": "Dot Red",
+                      "fill": "#FF5F56",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "o0mlf",
+                      "name": "Dot Yellow",
+                      "fill": "#FFBD2E",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "YOcPv",
+                      "name": "Dot Green",
+                      "fill": "#27C93F",
+                      "width": 10,
+                      "height": 10
+                    },
+                    {
+                      "type": "text",
+                      "id": "lZn9a",
+                      "name": "Terminal Title",
+                      "fill": "$text-tertiary",
+                      "content": "my-virtual-techteam — terminal",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZIukH",
+                  "name": "Terminal Body",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    20,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "n6mLv7",
+                      "name": "T Line 1",
+                      "fill": "$text-primary",
+                      "content": "$ /mvt-analyze \"User auth module\"",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Lihm9",
+                      "name": "T Line 2",
+                      "fill": "$accent-blue",
+                      "content": "[Analyst] Parsing requirement...",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "p1rmEk",
+                      "name": "T Line 3",
+                      "fill": "$text-secondary",
+                      "content": "→ Input: PRD section 3.2 — Authentication Flow",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kIg3h",
+                      "name": "T Line 4",
+                      "fill": "$text-secondary",
+                      "content": "→ Output: workspace/artifacts/auth-analysis.md",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LMOYd",
+                      "name": "T Line 5",
+                      "fill": "$accent-green",
+                      "content": "✓ Analysis complete. 4 bounded contexts identified.",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pk43X",
+                      "name": "T Line 6",
+                      "fill": "$text-secondary",
+                      "content": " ",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cn8gC",
+                      "name": "T Line 7",
+                      "fill": "$text-primary",
+                      "content": "$ /mvt-design",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "B7i5S",
+                      "name": "T Line 8",
+                      "fill": "$accent-purple",
+                      "content": "[Architect] Loading analysis context...",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MqK50",
+                      "name": "T Line 9",
+                      "fill": "$text-secondary",
+                      "content": "→ Generating architecture blueprint...",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dJaRd",
+                      "name": "T Line 10",
+                      "fill": "$accent-green",
+                      "content": "✓ Blueprint saved to workspace/artifacts/auth-design.md",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BV5vd",
+          "name": "Agents Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 64,
+          "padding": [
+            100,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "I7syCO",
+              "name": "Agents Header",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xF0Qp",
+                  "name": "Agents Eyebrow",
+                  "fill": "$accent-indigo",
+                  "content": "YOUR VIRTUAL TEAM",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "Aeq9z",
+                  "name": "Agents Title",
+                  "fill": "$text-primary",
+                  "content": "Meet Your Dedicated Specialists",
+                  "fontFamily": "Geist",
+                  "fontSize": 44,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "y8yTZ",
+              "name": "Agents Row",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "B9PK2w",
+                  "name": "Agent Conductor",
+                  "width": "fill_container",
+                  "fill": "$bg-surface",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Qz3TM",
+                      "name": "Conductor Badge",
+                      "width": 52,
+                      "height": 52,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#6366F1",
+                            "position": 0
+                          },
+                          {
+                            "color": "#818CF8",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "R6ZYKi",
+                          "name": "Conductor Ico",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "zap",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "eLu7t",
+                      "name": "Conductor Name",
+                      "fill": "$text-primary",
+                      "content": "Conductor",
+                      "fontFamily": "Geist",
+                      "fontSize": 17,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zLexp",
+                      "name": "Conductor Role",
+                      "fill": "$text-secondary",
+                      "content": "Workflow Orchestrator",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WSnNe",
+                      "name": "Conductor Tags",
+                      "gap": 6,
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ZxhJh",
+                          "name": "Tag init",
+                          "fill": "#6366F120",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dXtWg",
+                              "fill": "$accent-indigo",
+                              "content": "/mvt-init",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "D8YaSh",
+                          "name": "Tag status",
+                          "fill": "#6366F120",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "fOqqh",
+                              "fill": "$accent-indigo",
+                              "content": "/mvt-status",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pVUtH",
+                  "name": "Agent Analyst",
+                  "width": "fill_container",
+                  "fill": "$bg-surface",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EVibs",
+                      "name": "Analyst Badge",
+                      "width": 52,
+                      "height": 52,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#3B82F6",
+                            "position": 0
+                          },
+                          {
+                            "color": "#60A5FA",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "MPtDf",
+                          "name": "Analyst Ico",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "eye",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "wBWhd",
+                      "name": "Analyst Name",
+                      "fill": "$text-primary",
+                      "content": "Analyst",
+                      "fontFamily": "Geist",
+                      "fontSize": 17,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZOOMJ",
+                      "name": "Analyst Role",
+                      "fill": "$text-secondary",
+                      "content": "Business Expert",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HPjl3",
+                      "name": "Analyst Tags",
+                      "gap": 6,
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xmaCP",
+                          "name": "Tag analyze",
+                          "fill": "#3B82F620",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "C9v3yz",
+                              "fill": "$accent-blue",
+                              "content": "/mvt-analyze",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oZMiI",
+                  "name": "Agent Architect",
+                  "width": "fill_container",
+                  "fill": "$bg-surface",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "t6UPVT",
+                      "name": "Architect Badge",
+                      "width": 52,
+                      "height": 52,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#8B5CF6",
+                            "position": 0
+                          },
+                          {
+                            "color": "#A78BFA",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "j5tKYU",
+                          "name": "Architect Ico",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "ruler",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ngACg",
+                      "name": "Architect Name",
+                      "fill": "$text-primary",
+                      "content": "Architect",
+                      "fontFamily": "Geist",
+                      "fontSize": 17,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "T4VZpW",
+                      "name": "Architect Role",
+                      "fill": "$text-secondary",
+                      "content": "System Designer",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uAeWj",
+                      "name": "Architect Tags",
+                      "gap": 6,
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Hy6j0",
+                          "name": "Tag design",
+                          "fill": "#8B5CF620",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "oopWh",
+                              "fill": "$accent-purple",
+                              "content": "/mvt-design",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G0ijg",
+                  "name": "Agent Developer",
+                  "width": "fill_container",
+                  "fill": "$bg-surface",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "o9SiK",
+                      "name": "Developer Badge",
+                      "width": 52,
+                      "height": 52,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#10B981",
+                            "position": 0
+                          },
+                          {
+                            "color": "#34D399",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "lIalC",
+                          "name": "Developer Ico",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "code",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "S6ZwP5",
+                      "name": "Developer Name",
+                      "fill": "$text-primary",
+                      "content": "Developer",
+                      "fontFamily": "Geist",
+                      "fontSize": 17,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TwoiC",
+                      "name": "Developer Role",
+                      "fill": "$text-secondary",
+                      "content": "Implementer",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "AxPEr",
+                      "name": "Developer Tags",
+                      "gap": 6,
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "kb4KR",
+                          "name": "Tag impl",
+                          "fill": "#10B98120",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ikUY7",
+                              "fill": "$accent-green",
+                              "content": "/mvt-implement",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oNUYZ",
+                  "name": "Agent Reviewer",
+                  "width": "fill_container",
+                  "fill": "$bg-surface",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "bfDK7",
+                      "name": "Reviewer Badge",
+                      "width": 52,
+                      "height": 52,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#F59E0B",
+                            "position": 0
+                          },
+                          {
+                            "color": "#FBBF24",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "YUdNn",
+                          "name": "Reviewer Ico",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "shield-check",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "algS7",
+                      "name": "Reviewer Name",
+                      "fill": "$text-primary",
+                      "content": "Reviewer",
+                      "fontFamily": "Geist",
+                      "fontSize": 17,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "vnvHF",
+                      "name": "Reviewer Role",
+                      "fill": "$text-secondary",
+                      "content": "Quality Gate",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "B0g5tL",
+                      "name": "Reviewer Tags",
+                      "gap": 6,
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "n3UI3G",
+                          "name": "Tag review",
+                          "fill": "#F59E0B20",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "u8SZV",
+                              "fill": "$accent-orange",
+                              "content": "/mvt-review",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "acIu1",
+                  "name": "Agent Tester",
+                  "width": "fill_container",
+                  "fill": "$bg-surface",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "GaMGW",
+                      "name": "Tester Badge",
+                      "width": 52,
+                      "height": 52,
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": 180,
+                        "size": {
+                          "height": 1
+                        },
+                        "colors": [
+                          {
+                            "color": "#22D3EE",
+                            "position": 0
+                          },
+                          {
+                            "color": "#67E8F9",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "BF4eQ",
+                          "name": "Tester Ico",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "test-tube",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "cdPPF",
+                      "name": "Tester Name",
+                      "fill": "$text-primary",
+                      "content": "Tester",
+                      "fontFamily": "Geist",
+                      "fontSize": 17,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DQZDW",
+                      "name": "Tester Role",
+                      "fill": "$text-secondary",
+                      "content": "Security Guardian",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zRG0s",
+                      "name": "Tester Tags",
+                      "gap": 6,
+                      "justifyContent": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "wzPRh",
+                          "name": "Tag test",
+                          "fill": "#22D3EE20",
+                          "cornerRadius": 4,
+                          "padding": [
+                            3,
+                            8
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CsW9N",
+                              "fill": "$accent-cyan",
+                              "content": "/mvt-test",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "QwBFH",
+          "name": "Stories Section",
+          "width": "fill_container",
+          "fill": "$bg-surface",
+          "layout": "vertical",
+          "gap": 64,
+          "padding": [
+            100,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "U9F9ns",
+              "name": "Stories Header",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "C26CT",
+                  "name": "Stories Eyebrow",
+                  "fill": "$accent-indigo",
+                  "content": "REAL TEAMS, REAL WORKFLOWS",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "TqAaa",
+                  "name": "Stories Title",
+                  "fill": "$text-primary",
+                  "content": "Three Ways Developers Use MVTT",
+                  "fontFamily": "Geist",
+                  "fontSize": 44,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BNvsy",
+              "name": "Story Cards",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FbRj5",
+                  "name": "Story 1",
+                  "width": "fill_container",
+                  "fill": "$bg-primary",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "LSEjJ",
+                      "name": "Story 1 Top",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dDnh6",
+                          "name": "S1 Left",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "EFxF2",
+                              "name": "S1 Icon",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "building",
+                              "library": "lucide",
+                              "fill": "$accent-blue"
+                            },
+                            {
+                              "type": "text",
+                              "id": "SoY8k",
+                              "name": "S1 Role",
+                              "fill": "$accent-blue",
+                              "content": "Backend Engineer",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "XMyyD",
+                          "name": "S1 Tag",
+                          "fill": "#3B82F615",
+                          "cornerRadius": 4,
+                          "padding": [
+                            4,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "PS6Sy",
+                              "fill": "$accent-blue",
+                              "content": "Legacy Code",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "LXVok",
+                      "name": "S1 Title",
+                      "fill": "$text-primary",
+                      "content": "Inheriting a Legacy Codebase",
+                      "fontFamily": "Geist",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KyKpC",
+                      "name": "S1 Desc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Handed an undocumented Java monolith. Two weeks to map out the domain model.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ivyur",
+                      "name": "S1 Commands",
+                      "width": "fill_container",
+                      "fill": "#0D0D14",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        12,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oGhR6",
+                          "fill": "$text-secondary",
+                          "content": "$ npx @uoyo/mvtt install",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "BIPxG",
+                          "fill": "$text-primary",
+                          "content": "$ /mvt-analyze-code",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "j4JarH",
+                          "fill": "$text-primary",
+                          "content": "$ /mvt-status",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "U6sd5C",
+                      "name": "S1 Results",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "U40K4R",
+                          "fill": "$accent-green",
+                          "content": "✓ Auto-generated project-context",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ectKi",
+                          "fill": "$accent-green",
+                          "content": "✓ Module inventory & dependency map",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bp7A3",
+                          "fill": "$accent-green",
+                          "content": "✓ Deliverable code walkthrough report",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LBMVu",
+                  "name": "Story 2",
+                  "width": "fill_container",
+                  "fill": "$bg-primary",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Q9yvm",
+                      "name": "Story 2 Top",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ODMcU",
+                          "name": "S2 Left",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "QF5ow",
+                              "name": "S2 Icon",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "rocket",
+                              "library": "lucide",
+                              "fill": "$accent-purple"
+                            },
+                            {
+                              "type": "text",
+                              "id": "cCHep",
+                              "name": "S2 Role",
+                              "fill": "$accent-purple",
+                              "content": "Full-stack Developer",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jKDYA",
+                          "name": "S2 Tag",
+                          "fill": "#8B5CF615",
+                          "cornerRadius": 4,
+                          "padding": [
+                            4,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "KqPp1",
+                              "fill": "$accent-purple",
+                              "content": "Greenfield",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "r9N4c",
+                      "name": "S2 Title",
+                      "fill": "$text-primary",
+                      "content": "Starting a New Project",
+                      "fontFamily": "Geist",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CI6GS",
+                      "name": "S2 Desc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Building a SaaS subscription system from a PM-authored PRD document.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xcsQW",
+                      "name": "S2 Commands",
+                      "width": "fill_container",
+                      "fill": "#0D0D14",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        12,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lrQKH",
+                          "fill": "$text-primary",
+                          "content": "$ /mvt-init (DDD pattern)",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tsbWN",
+                          "fill": "$text-primary",
+                          "content": "$ /mvt-analyze → /mvt-design",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hrK2v",
+                          "fill": "$text-primary",
+                          "content": "$ /mvt-implement → /mvt-test",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wsJYx",
+                      "name": "S2 Results",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "U5PSDN",
+                          "fill": "$accent-green",
+                          "content": "✓ Cleanly layered codebase",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "y7n3P",
+                          "fill": "$accent-green",
+                          "content": "✓ Domain model diagrams",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "AStmI",
+                          "fill": "$accent-green",
+                          "content": "✓ Automated test suite",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dd8dU",
+                  "name": "Story 3",
+                  "width": "fill_container",
+                  "fill": "$bg-primary",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gWaid",
+                      "name": "Story 3 Top",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Shhsm",
+                          "name": "S3 Left",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "b4p7hi",
+                              "name": "S3 Icon",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "flask-conical",
+                              "library": "lucide",
+                              "fill": "$accent-cyan"
+                            },
+                            {
+                              "type": "text",
+                              "id": "QGkvu",
+                              "name": "S3 Role",
+                              "fill": "$accent-cyan",
+                              "content": "QA Engineer",
+                              "fontFamily": "Inter",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ym78I",
+                          "name": "S3 Tag",
+                          "fill": "#22D3EE15",
+                          "cornerRadius": 4,
+                          "padding": [
+                            4,
+                            10
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "oQVKW",
+                              "fill": "$accent-cyan",
+                              "content": "Extensibility",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "H80kw",
+                      "name": "S3 Title",
+                      "fill": "$text-primary",
+                      "content": "Custom Test Generation",
+                      "fontFamily": "Geist",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Fa1gv",
+                      "name": "S3 Desc",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Team enforces strict Gherkin/internal templates — default /mvt-test doesn't fit.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uJEun",
+                      "name": "S3 Commands",
+                      "width": "fill_container",
+                      "fill": "#0D0D14",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        12,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ozjmC",
+                          "fill": "$text-primary",
+                          "content": "$ /mvt-create-skill",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zNNIw",
+                          "fill": "$text-secondary",
+                          "content": "→ define template & coverage rules",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "eeeCW",
+                          "fill": "$text-primary",
+                          "content": "$ /mvt-test-custom",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BFcN8",
+                      "name": "S3 Results",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "m0v0Z",
+                          "fill": "$accent-green",
+                          "content": "✓ Tests matching team spec",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "y0dd0",
+                          "fill": "$accent-green",
+                          "content": "✓ Reusable custom skill (git-committable)",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ftPKB",
+                          "fill": "$accent-green",
+                          "content": "✓ Framework extensibility proven",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kMDnN",
+          "name": "Commands Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 64,
+          "padding": [
+            100,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "FIJ8T",
+              "name": "Commands Header",
+              "layout": "vertical",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LALJH",
+                  "name": "Cmd Eyebrow",
+                  "fill": "$accent-indigo",
+                  "content": "COMMAND CENTER",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "MeJuu",
+                  "name": "Cmd Title",
+                  "fill": "$text-primary",
+                  "content": "Master Your Commands",
+                  "fontFamily": "Geist",
+                  "fontSize": 44,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "O2lrrN",
+                  "name": "Cmd Desc",
+                  "fill": "$text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 520,
+                  "content": "After npx @uoyo/mvtt install, use these /mvt-* slash commands inside Claude Code.",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NqMHL",
+              "name": "Cmd Body",
+              "width": "fill_container",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "d45Rb",
+                  "name": "Cmd Nav",
+                  "width": 200,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gX9a9",
+                      "name": "CN Workflow",
+                      "width": "fill_container",
+                      "fill": "$accent-indigo",
+                      "cornerRadius": 8,
+                      "gap": 10,
+                      "padding": [
+                        12,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "wXAdT",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "rocket",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kIqKF",
+                          "fill": "#FFFFFF",
+                          "content": "Workflow",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "T5GZf",
+                      "name": "CN Analysis",
+                      "width": "fill_container",
+                      "cornerRadius": 8,
+                      "gap": 10,
+                      "padding": [
+                        12,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "bxWqe",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "search",
+                          "library": "lucide",
+                          "fill": "$text-secondary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "QYn5M",
+                          "fill": "$text-secondary",
+                          "content": "Analysis",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PdxNR",
+                      "name": "CN Build",
+                      "width": "fill_container",
+                      "cornerRadius": 8,
+                      "gap": 10,
+                      "padding": [
+                        12,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "iHFlw",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "hammer",
+                          "library": "lucide",
+                          "fill": "$text-secondary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xbdZt",
+                          "fill": "$text-secondary",
+                          "content": "Build",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UbI3x",
+                      "name": "CN Quality",
+                      "width": "fill_container",
+                      "cornerRadius": 8,
+                      "gap": 10,
+                      "padding": [
+                        12,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "PS0kx",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "shield",
+                          "library": "lucide",
+                          "fill": "$text-secondary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "uVdMi",
+                          "fill": "$text-secondary",
+                          "content": "Quality",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "t6idXc",
+                      "name": "CN Config",
+                      "width": "fill_container",
+                      "cornerRadius": 8,
+                      "gap": 10,
+                      "padding": [
+                        12,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "LciTB",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "settings",
+                          "library": "lucide",
+                          "fill": "$text-secondary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "a1kSW",
+                          "fill": "$text-secondary",
+                          "content": "Config & Extend",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "B8psV",
+                  "name": "Cmd Terminal",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#0D0D14",
+                  "cornerRadius": 12,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "U46Qad",
+                      "name": "CT Bar",
+                      "width": "fill_container",
+                      "height": 36,
+                      "fill": "#161622",
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "tRk7q",
+                          "fill": "#FF5F56",
+                          "width": 10,
+                          "height": 10
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "uDwj6",
+                          "fill": "#FFBD2E",
+                          "width": 10,
+                          "height": 10
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "N3zBhY",
+                          "fill": "#27C93F",
+                          "width": 10,
+                          "height": 10
+                        },
+                        {
+                          "type": "text",
+                          "id": "E5SGsw",
+                          "fill": "$text-tertiary",
+                          "content": "workflow commands",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DjfFV",
+                      "name": "CT Body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": [
+                        20,
+                        24
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NJdmm",
+                          "fill": "$text-primary",
+                          "content": "/mvt-init         Initialize the virtual team and project structure",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "l1LAto",
+                          "fill": "$text-primary",
+                          "content": "/mvt-status       Check current workflow and pipeline status",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Wy62h",
+                          "fill": "$text-primary",
+                          "content": "/mvt-help         List all available skills and usage examples",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "i1gTf",
+                          "fill": "$text-primary",
+                          "content": "/mvt-cleanup      Clean up chat history and stale artifacts",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "V9EI9U",
+                          "fill": "$text-secondary",
+                          "content": " ",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "wie3V",
+                          "name": "CT Demo",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "C2S89",
+                              "fill": "$accent-indigo",
+                              "content": "> /mvt-init",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "r2frf",
+                              "fill": "$accent-green",
+                              "content": "[MVTT] Virtual team initialized.",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "XyOwm",
+                              "fill": "$accent-green",
+                              "content": "✓ 5 agents activated. Ready for /mvt-analyze.",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "QlVcs",
+                              "fill": "$text-secondary",
+                              "content": " ",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "F8jUT",
+                              "fill": "$accent-indigo",
+                              "content": "> /mvt-status",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "pI3dE",
+                              "fill": "$text-secondary",
+                              "content": "Pipeline: idle | Agents: 5/5 online | Context: loaded",
+                              "fontFamily": "JetBrains Mono",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "eYpiD",
+          "name": "CTA Section",
+          "width": "fill_container",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "radial",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "width": 1,
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#6366F118",
+                "position": 0
+              },
+              {
+                "color": "#0A0A0F00",
+                "position": 0.7
+              }
+            ]
+          },
+          "layout": "vertical",
+          "gap": 32,
+          "padding": 120,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "QHDij",
+              "name": "CTA Title",
+              "fill": "$text-primary",
+              "textGrowth": "fixed-width",
+              "width": 700,
+              "content": "Ready to Hire Your AI Tech Team?",
+              "textAlign": "center",
+              "fontFamily": "Geist",
+              "fontSize": 48,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "s5xv6",
+              "name": "CTA Subtitle",
+              "fill": "$text-secondary",
+              "textGrowth": "fixed-width",
+              "width": 500,
+              "content": "Install once, type /mvt-init in Claude Code, and your virtual team is on the job.",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "yZt7L",
+              "name": "CTA Install Box",
+              "fill": "$bg-surface",
+              "cornerRadius": 12,
+              "stroke": "$border-hover",
+              "strokeWidth": 1,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#6366F130",
+                "blur": 20,
+                "spread": 4
+              },
+              "gap": 16,
+              "padding": [
+                18,
+                32
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SM2So",
+                  "fill": "$accent-cyan",
+                  "content": "$",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "K8dlr",
+                  "fill": "$text-primary",
+                  "content": "npx @uoyo/mvtt install",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 18,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "icon",
+                  "id": "djiz9",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "copy",
+                  "library": "lucide",
+                  "fill": "$text-tertiary"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HdNRm",
+              "name": "CTA Buttons",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "aaCVn",
+                  "name": "CTA Star",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 135,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#6366F1",
+                        "position": 0
+                      },
+                      {
+                        "color": "#8B5CF6",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "cornerRadius": 8,
+                  "gap": 8,
+                  "padding": [
+                    14,
+                    28
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "AZo9G",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "star",
+                      "library": "lucide",
+                      "fill": "#FFFFFF"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IeqxK",
+                      "fill": "#FFFFFF",
+                      "content": "Star on GitHub",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OKBau",
+                  "name": "CTA Docs",
+                  "cornerRadius": 8,
+                  "stroke": "$border-subtle",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    14,
+                    28
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "VakR8",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "book-open",
+                      "library": "lucide",
+                      "fill": "$text-primary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "e1YWM",
+                      "fill": "$text-primary",
+                      "content": "Documentation",
+                      "fontFamily": "Inter",
+                      "fontSize": 15,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "kGYsu",
+              "name": "CTA Version",
+              "fill": "$text-tertiary",
+              "content": "v2.0.0 · @uoyo/mvtt · MIT License",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mQJRR",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "$bg-surface",
+          "stroke": "$border-subtle",
+          "strokeWidth": {
+            "top": 1
+          },
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            60,
+            120,
+            40,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "DROTM",
+              "name": "Footer Top",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KQaP1",
+                  "name": "Footer Brand",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DxQn3",
+                      "fill": "$text-primary",
+                      "content": "My-Virtual-TechTeam",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "V3GEI",
+                      "fill": "$text-secondary",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "AI-Powered Virtual Dev Team\nfor Claude Code",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "t6PIe",
+                  "name": "Footer Links",
+                  "gap": 80,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "D15V7g",
+                      "name": "Links Col 1",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "o0xFX",
+                          "fill": "$text-tertiary",
+                          "content": "Links",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "I5VRom",
+                          "fill": "$text-secondary",
+                          "content": "GitHub Repo",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "T6Lsv",
+                          "fill": "$text-secondary",
+                          "content": "npm Package",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OSXDl",
+                          "fill": "$text-secondary",
+                          "content": "Documentation",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "T9ElA",
+                      "name": "Links Col 2",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tgcnX",
+                          "fill": "$text-tertiary",
+                          "content": "Resources",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "p4wexl",
+                          "fill": "$text-secondary",
+                          "content": "Quick Start",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "N0qpp",
+                          "fill": "$text-secondary",
+                          "content": "Dev Guide",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "V88Olm",
+                          "fill": "$text-secondary",
+                          "content": "Changelog",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PN1kJ",
+                      "name": "Links Col 3",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "KqByg",
+                          "fill": "$text-tertiary",
+                          "content": "Community",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "rJqXL",
+                          "fill": "$text-secondary",
+                          "content": "Report Issue",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZKZz4",
+                          "fill": "$text-secondary",
+                          "content": "Discussions",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "GfYv7",
+              "name": "Footer Divider",
+              "fill": "$border-subtle",
+              "width": "fill_container",
+              "height": 1
+            },
+            {
+              "type": "frame",
+              "id": "Nz0v0",
+              "name": "Footer Bottom",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tCQAy",
+                  "fill": "$text-tertiary",
+                  "content": "© 2026 My-Virtual-TechTeam. Licensed under MIT.",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "WDnl7",
+                  "fill": "$text-tertiary",
+                  "content": "Built for Claude Code",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "accent-blue": {
+      "type": "color",
+      "value": "#3B82F6"
+    },
+    "accent-cyan": {
+      "type": "color",
+      "value": "#22D3EE"
+    },
+    "accent-green": {
+      "type": "color",
+      "value": "#10B981"
+    },
+    "accent-indigo": {
+      "type": "color",
+      "value": "#6366F1"
+    },
+    "accent-orange": {
+      "type": "color",
+      "value": "#F59E0B"
+    },
+    "accent-purple": {
+      "type": "color",
+      "value": "#8B5CF6"
+    },
+    "bg-primary": {
+      "type": "color",
+      "value": "#0A0A0F"
+    },
+    "bg-surface": {
+      "type": "color",
+      "value": "#12121A"
+    },
+    "bg-surface-hover": {
+      "type": "color",
+      "value": "#1A1A26"
+    },
+    "border-hover": {
+      "type": "color",
+      "value": "#6366F166"
+    },
+    "border-subtle": {
+      "type": "color",
+      "value": "#FFFFFF10"
+    },
+    "font-body": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "font-heading": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "font-mono": {
+      "type": "string",
+      "value": "JetBrains Mono"
+    },
+    "radius-lg": {
+      "type": "number",
+      "value": 12
+    },
+    "radius-sm": {
+      "type": "number",
+      "value": 8
+    },
+    "text-primary": {
+      "type": "color",
+      "value": "#F5F5F7"
+    },
+    "text-secondary": {
+      "type": "color",
+      "value": "#8B8B9E"
+    },
+    "text-tertiary": {
+      "type": "color",
+      "value": "#4A4A5C"
+    }
+  }
+}
