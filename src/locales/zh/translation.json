@@ -1,293 +1,274 @@
 {
   "nav": {
-    "features": "特性",
+    "why": "为什么选择 MVTT",
     "workflow": "工作流",
-    "stories": "场景",
-    "agents": "特工团队",
-    "architecture": "指令",
-    "github": "GitHub",
-    "getStarted": "开始使用",
-    "language": "EN"
+    "skills": "技能",
+    "faq": "常见问题",
+    "cta": "开始使用"
   },
   "hero": {
-    "titlePart1": "释放你的开发潜能,打造你的",
-    "titlePart2": "私人 AI 技术团队",
-    "subtitle": "Claude Code 原生框架,内置 29 个 /mvt-* 技能。一行 CLI 零拷贝安装 —— 把完整软件生命周期交给分析师、架构师、开发者、审查员、测试员组成的虚拟团队。",
-    "quickStart": "快速开始",
-    "viewGithub": "在 GitHub 上查看",
-    "terminal": {
-      "userInstall": "$ npx @uoyo/mvtt install",
-      "installLang": "? 选择语言: 中文 (zh-CN)",
-      "installProgress": "✓ 正在安装 MVTT v2.0.0...",
-      "installSkills": "✓ 29 个 skill 已注册到 .claude/skills/",
-      "installWorkspace": "✓ 工作区已初始化 .ai-agents/",
-      "userInit": "$ /mvt-init",
-      "conductorStart": "[MVTT] 正在启动虚拟技术团队...",
-      "conductorParse": "[MVTT] 加载 registry.yaml 与 manifest...",
-      "agent1": "✓ Analyst(分析师)已激活",
-      "agent2": "✓ Architect(架构师)已激活",
-      "agent3": "✓ Developer(开发者)已激活",
-      "agent4": "✓ Reviewer(审查员)已激活",
-      "agent5": "✓ Tester(测试员)已激活",
-      "conductorContext": "[MVTT] 团队已就绪,等待任务分配...",
-      "userInput2": "$ /mvt-analyze \"用户认证模块\"",
-      "analyzing": "[Analyst] 正在分析需求..."
+    "badge": "我的虚拟技术团队",
+    "titleLead": "准备好迎接你的",
+    "titleAccent": "虚拟技术团队?",
+    "subtitle": "一支共享持久工作区的专业 AI 技能团队——覆盖从需求到测试代码的完整开发生命周期。一次安装，端到端交付。",
+    "ctaPrimary": "立即开始",
+    "ctaSecondary": "了解工作方式",
+    "installCommand": "npx @uoyo/mvtt install",
+    "statsTitle": "一组 skill，不同的角色。构建出完整的开发周期。",
+    "stats": [
+      { "value": "全流程", "label": "开发周期" },
+      { "value": "20+", "label": "内置 Skills" },
+      { "value": "随时", "label": "恢复上下文" },
+      { "value": "中英", "label": "双语支持" }
+    ],
+    "floating": {
+      "sessionYaml": {
+        "filename": "session.yaml",
+        "activeChange": "active_change:",
+        "id": "id: feat-auth",
+        "status": "status: in_progress",
+        "lastSynced": "last_synced: today"
+      },
+      "skillBadge": "正在运行的技能",
+      "teamBadge": "你的团队",
+      "terminal": {
+        "command": "$ npx @uoyo/mvtt install",
+        "result": "团队已就绪。"
+      }
     }
   },
-  "install": {
-    "title": "只需几秒,立刻开箱即用",
-    "description": "一行 CLI,零拷贝安装。在任意项目目录执行 npx @uoyo/mvtt install —— 交互式选语言、选架构模式,然后在 Claude Code 里 /mvt-init 即可启动。"
-  },
-  "features": {
-    "title1": "为什么选择 ",
-    "title2": "My-Virtual-TechTeam",
-    "title3": "?",
-    "subtitle": "9 个核心特性,让你的 AI 技术团队既高效、模块化,又 Claude Code 原生。",
+  "problem": {
+    "label": "问题所在",
+    "title": "每次 AI 会话都从零开始。",
+    "intro": "你昨天构建的项目上下文——架构、规范、领域知识——今天就消失了。三个问题让真实项目尤其痛苦。",
     "items": [
       {
-        "title": "Role Separation",
-        "titleZh": "🎭 明确的职责边界",
-        "desc": "告别单一大语言模型的混乱输出。每个 Agent 拥有精准的角色定位,专注于自己最擅长的环节。"
+        "icon": "solar:cloud-rain-linear",
+        "title": "上下文蒸发。",
+        "desc": "关闭 IDE、切换设备、下周再回来——AI 已经忘掉了一切。"
       },
       {
-        "title": "Claude Code Native",
-        "titleZh": "🌐 Claude Code 原生",
-        "desc": "基于 Claude Code skills 构建。29 个 /mvt-* 斜杠命令直接进入编辑器,无需克隆脚手架。"
+        "icon": "solar:repeat-linear",
+        "title": "每次都要重复解释。",
+        "desc": "重新讲技术栈、重新说规范、重新描述业务。一遍又一遍。"
       },
       {
-        "title": "Unified Registry",
-        "titleZh": "📂 Manifest 驱动安装",
-        "desc": "install / update / uninstall / doctor 全生命周期管理,hash 完整性校验,原地安全升级。"
-      },
-      {
-        "title": "Context Contract",
-        "titleZh": "🤝 智能上下文契约",
-        "desc": "每个特工明确声明前置依赖,确保 AI 获得精确上下文,杜绝幻觉和错误推断。"
-      },
-      {
-        "title": "Workspace Architecture",
-        "titleZh": "🗄️ .ai-agents 工作区",
-        "desc": "session、project-context、artifacts、knowledge、templates 全部归入 .ai-agents/,可移植、可进 git。"
-      },
-      {
-        "title": "Semantic Index",
-        "titleZh": "🧠 语义化知识索引",
-        "desc": "项目规范和领域知识按语义索引,特工仅在需要时按需加载,节省 Token。"
-      },
-      {
-        "title": "Semi-automatic workflows",
-        "titleZh": "⚙️ 人机协同控制流",
-        "desc": "非盲目全自动。关键阶段由开发者确认设计方案,再向下流转到代码生成。"
-      },
-      {
-        "title": "Extensible Skills",
-        "titleZh": "🧩 可长出自己的 Skill",
-        "desc": "通过 /mvt-create-skill 生成团队专属斜杠命令,Skill 可复用、可分享、可提交到 git。"
-      },
-      {
-        "title": "Multilingual Output",
-        "titleZh": "🌍 中英双语输出",
-        "desc": "安装时选择 preferences.language —— artifact、review 报告、架构文档自动按团队语言输出。"
+        "icon": "solar:layers-minimalistic-linear",
+        "title": "缺乏职责分离。",
+        "desc": "分析、设计、代码、测试挤在同一个对话里,没有结构,没有交接。"
       }
-    ]
+    ],
+    "mentalModel": "<accent>30 秒理解心智模型:</accent>想象雇佣一支迷你工程团队——分析师、架构师、开发、审查、测试——他们共享一本住在你仓库里的项目笔记。工作流是标准化的,无论你是高级还是初级工程师都能产出同样的结果。<accent>这就是 MVTT。</accent>"
+  },
+  "persistent": {
+    "label": "持久化上下文",
+    "title": "随项目一起<br/>成长的上下文。",
+    "desc": "会话之间上下文永不丢失。明天打开一个新的 AI Agent 会话,它会精准地从上次离开的地方接上——领域模型、架构决策、进行中的任务、团队规范,全都还在。",
+    "features": [
+      {
+        "icon": "solar:cloud-storage-linear",
+        "title": "保存进度",
+        "desc": "每个技能自动更新 session.yaml 记录完成的工作。"
+      },
+      {
+        "icon": "solar:play-circle-linear",
+        "title": "随时继续",
+        "desc": "/mvt-resume 在新对话中恢复完整上下文。"
+      },
+      {
+        "icon": "solar:refresh-linear",
+        "title": "变更后同步",
+        "desc": "/mvt-sync-context 在工作流之外代码变化时更新上下文。"
+      }
+    ],
+    "fileTree": {
+      "root": ".ai-agents/",
+      "lines": [
+        { "indent": 0, "text": "workspace/", "color": "muted" },
+        { "indent": 1, "text": "session.yaml", "color": "zinc", "comment": "# 谁做了什么,进行中的是什么" },
+        { "indent": 1, "text": "project-context.yaml", "color": "zinc", "comment": "# 技术栈、领域模型" },
+        { "indent": 1, "text": "artifacts/", "color": "zinc", "comment": "# 分析、设计、审查日志" },
+        { "indent": 0, "text": "knowledge/", "color": "muted" },
+        { "indent": 1, "text": "core/", "color": "zinc", "comment": "# 框架核心原则" },
+        { "indent": 1, "text": "principle/", "color": "zinc", "comment": "# 团队的编码规范" },
+        { "indent": 1, "text": "project/", "color": "amber", "comment": "# 领域专属知识", "highlight": true },
+        { "indent": 0, "text": "registry.yaml", "color": "muted", "comment": "# 技能索引" },
+        { "indent": 0, "text": "config.yaml", "color": "muted", "comment": "# 框架配置" }
+      ]
+    },
+    "caption": "版本受控。团队共享。跟随仓库一起走。"
   },
   "workflow": {
-    "title": "丝滑的开发全生命周期",
-    "subtitle": "/mvt-* 斜杠命令如何驱动整条流水线。",
+    "label": "工作流",
+    "title": "一份共享事实,零漂移。",
+    "subtitle": "分析师发现一个领域概念,架构师就能看到。架构师做出设计决策,开发人员就会遵循。",
+    "silos": ["分析", "设计", "规划", "实现", "审查", "测试"],
+    "states": [
+      "你的 AI 助手是个通才。<br/>它能帮忙——但它无法主导工作流。",
+      "MVTT 给了它一支团队。每个技能各司其职。",
+      "需求变成分析。<br/>分析变成<accent>设计。</accent>",
+      "设计变成代码。<br/>代码经过审查。<br/>审查过的再<accent>测试。</accent>",
+      "上下文流经每个阶段。<br/>上一步的输出是下一步的输入。<br/><accent>它累积,不重置。</accent>",
+      "你的团队,一本共享笔记。<br/>每一次会话都让下一次更好。"
+    ],
+    "closingHeadline": "端到端<accent>交付功能。</accent>",
+    "foundation": {
+      "title": "共享上下文层",
+      "subtitle": "session.yaml + project-context.yaml + knowledge/"
+    }
+  },
+  "skills": {
+    "label": "技能",
+    "title": "不是命令,是一支整合的团队。",
+    "subtitle": "每个技能的输出是下一个技能的输入。上下文累积,而不是蒸发。",
+    "categories": [
+      {
+        "id": "workflow",
+        "label": "工作流——完整开发周期",
+        "layout": "wide",
+        "items": [
+          { "icon": "solar:chart-2-linear", "command": "/mvt-analyze", "useWhen": "你有一份新的需求文档或功能规格需要拆解。", "desc": "将领域概念、功能和验收标准提取为结构化分析。" },
+          { "icon": "solar:buildings-2-linear", "command": "/mvt-design", "useWhen": "需求已就绪,需要架构。", "desc": "基于分析后的需求定义模块、边界和数据流。" },
+          { "icon": "solar:map-linear", "command": "/mvt-plan-dev", "useWhen": "设计太大,一次实现不完。", "desc": "生成有序任务和依赖关系的可跟踪计划。" },
+          { "icon": "solar:code-square-linear", "command": "/mvt-implement", "useWhen": "设计和计划已就绪,准备变成代码。", "desc": "按照设计和计划规范编写生产代码。" },
+          { "icon": "solar:check-square-linear", "command": "/mvt-review", "useWhen": "实现已写好,需要质量检查。", "desc": "检查质量、规范合规性,识别潜在问题。" },
+          { "icon": "solar:test-tube-linear", "command": "/mvt-test", "useWhen": "实现已审查,准备测试。", "desc": "生成验证实现行为的测试。" }
+        ]
+      },
+      {
+        "id": "shortcuts",
+        "label": "快捷方式——跳过仪式感",
+        "layout": "wide",
+        "items": [
+          { "icon": "solar:radar-2-linear", "command": "/mvt-bug-detect", "useWhen": "你怀疑有 bug,想在改之前先诊断。", "desc": "调查根因和影响范围。只读——不做任何代码改动。" },
+          { "icon": "solar:bug-linear", "command": "/mvt-fix", "useWhen": "Bug 已确认,准备修复。", "desc": "带着对代码库的完整上下文认知进行诊断和修复。" },
+          { "icon": "solar:refresh-linear", "command": "/mvt-refactor", "useWhen": "你想重构代码而不改变行为。", "desc": "带着对架构决策和规范的理解进行重构。" },
+          { "icon": "solar:bolt-linear", "command": "/mvt-quick-dev", "useWhen": "1-3 个文件的改动,范围明确,架构无关。", "desc": "直奔实现,跳过完整的工作流仪式。" }
+        ]
+      },
+      {
+        "id": "context",
+        "label": "上下文管理",
+        "layout": "grid",
+        "items": [
+          { "icon": "solar:play-circle-linear", "command": "/mvt-init", "desc": "检测技术栈并初始化工作区。首次使用或重大重构时使用。" },
+          { "icon": "solar:history-linear", "command": "/mvt-resume", "desc": "从上一次会话恢复完整上下文,精准地接着干。" },
+          { "icon": "solar:chart-square-linear", "command": "/mvt-status", "desc": "\"我现在到哪一步了?\"显示进度和已加载的上下文。" },
+          { "icon": "solar:code-scan-linear", "command": "/mvt-analyze-code", "desc": "反向分析已有代码,生成结构化项目上下文。非常适合上手。" },
+          { "icon": "solar:refresh-circle-linear", "command": "/mvt-sync-context", "desc": "工作流之外发生代码变更时,协调工作区与代码的一致性。" },
+          { "icon": "solar:graph-down-linear", "command": "/mvt-check-context", "desc": "分析 token 占用,使用量高时给出优化建议。" },
+          { "icon": "solar:folder-with-files-linear", "command": "/mvt-manage-context", "desc": "添加、删除或重组知识条目和注册表绑定。" },
+          { "icon": "solar:trash-bin-trash-linear", "command": "/mvt-cleanup", "desc": "归档过期工件,维护工作区健康。" }
+        ]
+      },
+      {
+        "id": "utility",
+        "label": "工具与规划",
+        "layout": "grid",
+        "items": [
+          { "icon": "solar:graph-new-up-linear", "command": "/mvt-decompose", "desc": "将史诗级需求拆分为合适大小的子变更,并维护 DAG 依赖。" },
+          { "icon": "solar:checklist-minimalistic-linear", "command": "/mvt-update-plan", "desc": "将任务标记为完成/阻塞/跳过,并自动推进 plan.yaml 中的 current_tasks。" },
+          { "icon": "solar:settings-linear", "command": "/mvt-config", "desc": "修改框架设置,如语言、输出格式和偏好。" },
+          { "icon": "solar:file-text-linear", "command": "/mvt-template", "desc": "查看和自定义技能工件的输出模板。" },
+          { "icon": "solar:widget-add-linear", "command": "/mvt-create-skill", "desc": "为团队特定需求交互式地搭建新的自定义技能。" },
+          { "icon": "solar:question-circle-linear", "command": "/mvt-help", "desc": "显示可用技能、当前状态,并建议下一步。" }
+        ]
+      }
+    ]
+  },
+  "recipes": {
+    "label": "常见配方",
+    "title": "挑一个适合你的配方。",
+    "subtitle": "你不必每次都用上所有技能。每个配方都是一个起点——/mvt-help 会根据项目的实际状态建议下一步。",
+    "items": [
+      { "name": "添加新功能", "steps": [
+        { "cmd": "analyze" }, { "cmd": "design" }, { "cmd": "plan-dev" }, { "cmd": "implement" }, { "cmd": "review" }, { "cmd": "test" }
+      ]},
+      { "name": "调查 Bug", "steps": [
+        { "cmd": "bug-detect" }
+      ]},
+      { "name": "修复已知 Bug", "steps": [
+        { "cmd": "fix" }
+      ]},
+      { "name": "重构模块", "steps": [
+        { "cmd": "analyze-code" }, { "cmd": "refactor" }, { "cmd": "review" }, { "cmd": "test" }
+      ]},
+      { "name": "史诗级变更", "steps": [
+        { "cmd": "decompose" }, { "cmd": "analyze" }, { "cmd": "more" }
+      ]},
+      { "name": "快速修改 1-3 个文件", "steps": [
+        { "cmd": "quick-dev" }
+      ]},
+      { "name": "接手新代码库", "steps": [
+        { "cmd": "analyze-code" }
+      ]}
+    ]
+  },
+  "whoIsFor": {
+    "label": "适用对象",
+    "title": "为在真实、持续项目中使用<br/>AI Agent 的开发者而设计。",
+    "subtitle": "不是一次性的脚本。是需要持久上下文的真实代码库。",
+    "fit": [
+      "你维护着一个中等规模代码库(5k+ LOC),每天都在感受上下文丢失的痛苦。",
+      "你希望即使独自工作时也有一套结构化的工作流——分析、设计、实现、审查、测试。",
+      "你带领着一支 AI 使用水平参差不齐的团队——MVTT 标准化了工作流,让初级和高级工程师产出一致。",
+      "你想要一本跟随仓库一起走的项目笔记——版本受控、团队共享、中英双语。"
+    ],
+    "skip": {
+      "title": "如果你属于以下情况,跳过 MVTT...",
+      "items": [
+        "只是写一次性脚本(普通 AI Agent 更快)",
+        "需要企业级 CI/CD 流水线或基于角色的访问控制",
+        "更喜欢单个 CLAUDE.md 加自己写提示词"
+      ]
+    }
+  },
+  "faq": {
+    "label": "常见问题",
+    "title": "大家常问的。",
     "items": [
       {
-        "id": "1",
-        "command": "/mvt-analyze",
-        "desc1": "提取业务概念,分析 PRD 文档。",
-        "desc2": "结构化的需求拆解与验收标准。"
+        "q": "MVTT 和写一份好的 CLAUDE.md 有什么区别?",
+        "a": "CLAUDE.md 给 Claude <strong>指令</strong>。MVTT 给 Claude 一支<strong>团队</strong>——专业技能,共享记忆,专用模板,交接协议。CLAUDE.md 是一份备忘录,MVTT 是一张组织架构图。两者可以一起用,不冲突。"
       },
       {
-        "id": "2",
-        "command": "/mvt-design",
-        "desc1": "制定技术栈,规划系统/模块架构。",
-        "desc2": "可验证的架构蓝图与数据库/API 设计。"
+        "q": "它会爆炸式增加我的 token 消耗吗?",
+        "a": "不会。工作区是基于文件的、按需加载的。MVTT 只加载与当前技能相关的上下文(默认相关性阈值 70%)。运行 <code>/mvt-check-context</code> 查看你的 token 占用并进行优化。"
       },
       {
-        "id": "3",
-        "command": "/mvt-implement",
-        "desc1": "根据架构设计落实业务代码。",
-        "desc2": "业务领域代码,严格遵守上下文契约。"
+        "q": "它只支持英文吗?",
+        "a": "不是。设置 <code>preferences.interaction_language: zh-CN</code>,框架就会切换到中文——对话和生成的工件都会用中文。双语项目是一等公民。"
       },
       {
-        "id": "4",
-        "command": "/mvt-review",
-        "desc1": "深入代码内部,执行静态与规范检查。",
-        "desc2": "重构建议与质量改进报告。"
+        "q": "我的团队能一起用吗?",
+        "a": "可以。<code>.ai-agents/</code> 工作区是版本受控的,跟随仓库一起走。团队每个人看到的上下文、计划、历史都一样。只需把 <code>.ai-agents/</code> 提交到仓库即可。"
       },
       {
-        "id": "5",
-        "command": "/mvt-test",
-        "desc1": "针对核心业务路径设计测试用例。",
-        "desc2": "高覆盖率的单元测试/集成测试代码。"
+        "q": "为什么有这么多技能?不会过度设计吗?",
+        "a": "大多数团队常用 5-8 个技能。其余的存在是为了处理特定情况(史诗级拆解、上下文同步、输出模板)——你不需要一开始就学完。运行 <code>/mvt-help</code>,它会告诉你下一步该用哪个。"
       }
     ]
   },
-  "stories": {
-    "title": "真实团队,真实工作流",
-    "subtitle": "三种把 MVTT 用起来的典型路径。",
-    "items": [
-      {
-        "icon": "🏛️",
-        "role": "后端工程师",
-        "title": "接手遗产代码",
-        "scenario": "接手一个没有文档的老 Java 单体,两周内要摸清领域模型。",
-        "commands": [
-          "npx @uoyo/mvtt install",
-          "/mvt-analyze-code",
-          "/mvt-add-context",
-          "/mvt-status"
-        ],
-        "outcomes": [
-          "自动生成的 project-context",
-          "模块清单与依赖关系",
-          "可交付的代码走读报告"
-        ]
-      },
-      {
-        "icon": "🚀",
-        "role": "全栈开发者",
-        "title": "从零开始新项目",
-        "scenario": "基于 PM 撰写的 PRD,实现一个 SaaS 订阅管理系统。",
-        "commands": [
-          "/mvt-init (选 DDD 模式)",
-          "/mvt-analyze",
-          "/mvt-design",
-          "/mvt-implement",
-          "/mvt-test"
-        ],
-        "outcomes": [
-          "分层清晰的代码",
-          "领域模型图",
-          "自动化测试套件"
-        ]
-      },
-      {
-        "icon": "🧪",
-        "role": "测试工程师",
-        "title": "定制化测试生成",
-        "scenario": "团队有严格的 Gherkin/内部模板约定,默认 /mvt-test 不完全匹配。",
-        "commands": [
-          "/mvt-create-skill",
-          "→ 定义模板与覆盖维度",
-          "→ 复用 knowledge/principle",
-          "/mvt-test-custom"
-        ],
-        "outcomes": [
-          "符合团队规范的测试用例",
-          "可复用的自定义 skill(可进 git)",
-          "框架可扩展性,实证闭环"
-        ]
-      }
-    ]
-  },
-  "agents": {
-    "title": "你麾下的专属专家",
-    "subtitle": "认识你的虚拟特工阵容。",
-    "items": [
-      {
-        "name": "指挥官 (Conductor)",
-        "role": "流程编排者",
-        "desc": "框架的核心入口,负责解析用户意图,唤醒相应特工并监控流转状态。",
-        "cmds": "/mvt-init, /mvt-status, /mvt-config"
-      },
-      {
-        "name": "分析师 (Analyst)",
-        "role": "洞察业务",
-        "desc": "擅长阅读长篇文档或庞杂的既有代码,将其转化为开发可落实的业务域概念。",
-        "cmds": "/mvt-analyze, /mvt-analyze-code"
-      },
-      {
-        "name": "架构师 (Architect)",
-        "role": "构筑基石",
-        "desc": "基于分析结果拍板技术选型,设计严谨的系统分层架构方案与接口契约。",
-        "cmds": "/mvt-design"
-      },
-      {
-        "name": "开发者 (Developer)",
-        "role": "代码实现者",
-        "desc": "完美遵循架构师蓝图,不偏离上下文,撰写优雅、符合最佳实践的生产级代码。",
-        "cmds": "/mvt-implement, /mvt-fix, /mvt-refactor"
-      },
-      {
-        "name": "审查员 (Reviewer)",
-        "role": "质量门神",
-        "desc": "用极其严苛的标准检查 Developer 提交的代码,查找逻辑漏洞、安全隐患与坏味道。",
-        "cmds": "/mvt-review"
-      },
-      {
-        "name": "测试员 (Tester)",
-        "role": "安全铸造者",
-        "desc": "探索边缘用例,编写自动化测试脚本,把关最后一公里的代码可靠性。",
-        "cmds": "/mvt-test"
-      }
-    ]
-  },
-  "commands": {
-    "title": "掌握指挥官的魔杖",
-    "subtitle": "执行 npx @uoyo/mvtt install 之后,在 Claude Code 中使用下列 /mvt-* 斜杠命令。",
-    "sections": [
-      {
-        "title": "🚀 工作流",
-        "cmds": [
-          { "cmd": "/mvt-init", "desc": "初始化虚拟团队与项目结构。" },
-          { "cmd": "/mvt-status", "desc": "查看当前工作流与流水线状态。" },
-          { "cmd": "/mvt-help", "desc": "列出所有可用 skill 与用法示例。" },
-          { "cmd": "/mvt-cleanup", "desc": "清理聊天历史与陈旧工件。" }
-        ]
-      },
-      {
-        "title": "🕵️‍♂️ 分析",
-        "cmds": [
-          { "cmd": "/mvt-analyze", "desc": "从 PRD 中做需求分析。" },
-          { "cmd": "/mvt-analyze-code", "desc": "对遗产代码做逆向分析。" },
-          { "cmd": "/mvt-add-context", "desc": "把团队惯例注入 project-context。" },
-          { "cmd": "/mvt-sync-context", "desc": "强制刷新工作区记忆。" }
-        ]
-      },
-      {
-        "title": "🏗️ 构建",
-        "cmds": [
-          { "cmd": "/mvt-design", "desc": "技术蓝图与模块拆分。" },
-          { "cmd": "/mvt-implement", "desc": "开始撰写业务代码。" },
-          { "cmd": "/mvt-test", "desc": "生成单元与集成测试。" }
-        ]
-      },
-      {
-        "title": "🛡️ 质量",
-        "cmds": [
-          { "cmd": "/mvt-review", "desc": "代码审查与安全检查。" },
-          { "cmd": "/mvt-fix", "desc": "带上下文的智能修复。" },
-          { "cmd": "/mvt-refactor", "desc": "结构性重构。" }
-        ]
-      },
-      {
-        "title": "⚙️ 配置与扩展",
-        "cmds": [
-          { "cmd": "/mvt-config", "desc": "修改框架配置或 LLM。" },
-          { "cmd": "/mvt-template", "desc": "管理输出模板。" },
-          { "cmd": "/mvt-check-context", "desc": "校验上下文完整性。" },
-          { "cmd": "/mvt-create-skill", "desc": "生成团队专属 /mvt-* skill。" }
-        ]
-      }
-    ]
-  },
-  "cta": {
-    "titlePart1": "准备好雇佣你的 AI 技术团队了吗?",
-    "subtitle": "执行一次安装,在 Claude Code 里输入 /mvt-init,你的虚拟团队即刻上岗。",
-    "button": "在 GitHub 标星"
+  "install": {
+    "label": "开始使用",
+    "title": "一条命令<br/><muted>装好你的团队。</muted>",
+    "subtitle": "把 MVTT 安装到任何项目。不到一分钟,一支完整的专业 AI 技能团队就绪。无需配置,兼容任何已有代码库。",
+    "codeLines": [
+      { "prefix": "$", "text": "npx @uoyo/mvtt install" },
+      { "prefix": "#", "text": "在 AI Agent 中打开,然后:" },
+      { "prefix": ">", "text": "/mvt-init" },
+      { "prefix": ">", "text": "/mvt-analyze" }
+    ],
+    "commands": [
+      { "cmd": "install", "desc": "首次安装" },
+      { "cmd": "update", "desc": "安全升级" },
+      { "cmd": "doctor", "desc": "健康检查" },
+      { "cmd": "uninstall", "desc": "安全卸载" }
+    ],
+    "ctaPrimary": "在 npm 上查看",
+    "ctaSecondary": "GitHub"
   },
   "footer": {
-    "copyright": "© 2026 My-Virtual-TechTeam. Licensed under MIT.",
-    "version": "v2.0.0 · @uoyo/mvtt",
-    "links": {
-      "rep": "GitHub 仓库",
-      "doc": "项目文档",
-      "issue": "报告问题"
-    }
+    "license": "基于 MIT 协议开源。"
   }
 }

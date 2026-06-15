@@ -1,25 +1,29 @@
 import { Navbar } from "@/components/Navbar"
 import { HeroSection } from "@/components/HeroSection"
-import { FeaturesSection } from "@/components/FeaturesSection"
+import { ProblemSection } from "@/components/ProblemSection"
+import { PersistentSection } from "@/components/PersistentSection"
 import { WorkflowSection } from "@/components/WorkflowSection"
-import { AgentsSection } from "@/components/AgentsSection"
-import { ArchitectureSection } from "@/components/ArchitectureSection"
-import { StoriesSection } from "@/components/StoriesSection"
-import { CTASection } from "@/components/CTASection"
+import { SkillsSection } from "@/components/SkillsSection"
+import { RecipesSection } from "@/components/RecipesSection"
+import { WhoIsForSection } from "@/components/WhoIsForSection"
+import { FAQSection } from "@/components/FAQSection"
+import { InstallCTASection } from "@/components/InstallCTASection"
 import { Footer } from "@/components/Footer"
 
 function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
+    <div className="min-h-screen bg-background text-foreground font-sans antialiased selection:bg-amber-200 selection:text-amber-900 overflow-x-clip">
       <Navbar />
       <main>
         <HeroSection />
-        <FeaturesSection />
+        <ProblemSection />
+        <PersistentSection />
         <WorkflowSection />
-        <AgentsSection />
-        <StoriesSection />
-        <ArchitectureSection />
-        <CTASection />
+        <SkillsSection />
+        <RecipesSection />
+        <WhoIsForSection />
+        <FAQSection />
+        <InstallCTASection />
       </main>
       <Footer />
     </div>

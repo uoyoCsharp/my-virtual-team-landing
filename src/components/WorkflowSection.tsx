@@ -1,101 +1,277 @@
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
-import { cn } from "@/lib/utils"
+import { SectionLabel } from "@/components/ui/SectionLabel"
 import { useTranslation } from "react-i18next"
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion"
+import { useRef } from "react"
+
+interface WorkflowData {
+  label: string
+  title: string
+  subtitle: string
+  silos: string[]
+  states: string[]
+  closingHeadline: string
+  foundation: { title: string; subtitle: string }
+}
+
+const STATE_COUNT = 6
+const SECTION_VH = 400
+const TEXT_PANEL_HEIGHT = 240
 
 export function WorkflowSection() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
   const { t } = useTranslation()
+  const ref = useRef<HTMLDivElement>(null)
 
-  const itemsInfo = t("workflow.items", { returnObjects: true }) as Array<{id: string, command: string, desc1: string, desc2: string}>;
-  
-  const visuals = [
-    { snippet: "[Analyst] Parsing requirement...\n→ Input: \"User auth\"\n→ Output: workspace/auth.md", color: "text-neon", glowColor: "rgba(0,240,255,0.15)", agent: "Analyst" },
-    { snippet: "[Architect] Designing system...\n→ Output: architecture/auth-design.md", color: "text-accent", glowColor: "rgba(139,92,246,0.15)", agent: "Architect" },
-    { snippet: "[Developer] Implementing...\n→ Output: src/auth/auth.service.ts", color: "text-primary", glowColor: "rgba(59,130,246,0.15)", agent: "Developer" },
-    { snippet: "[Reviewer] Reviewing code...\n→ Report: reviews/auth-review.md", color: "text-success", glowColor: "rgba(16,185,129,0.15)", agent: "Reviewer" },
-    { snippet: "[Tester] Generating tests...\n→ Output: tests/auth.spec.ts", color: "text-yellow-400", glowColor: "rgba(250,204,21,0.15)", agent: "Tester" }
-  ];
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end end"],
+  })
+
+  const progress = useTransform(scrollYProgress, [0, 1], [0, STATE_COUNT])
+
+  const data = t("workflow", { returnObjects: true }) as WorkflowData
 
   return (
-    <section id="workflow" className="relative py-16 sm:py-24 lg:py-32" ref={ref}>
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full opacity-10"
-          style={{ background: "radial-gradient(ellipse, #3B82F6 0%, transparent 70%)", filter: "blur(100px)" }}
-        />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : undefined} transition={{ duration: 0.6 }} className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-3 sm:mb-4">
-            <span className="bg-gradient-to-r from-neon to-primary bg-clip-text text-transparent">
-              {t("workflow.title")}
-            </span>
-          </h2>
-          <p className="text-muted text-base sm:text-lg max-w-2xl mx-auto">{t("workflow.subtitle")}</p>
+    <section
+      id="workflow"
+      ref={ref}
+      className="bg-[#0A0A0A] text-white relative overflow-x-clip"
+      style={{ height: `${SECTION_VH}vh` }}
+    >
+      <div
+        className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden border-t border-zinc-900"
+        style={{ position: "sticky" }}
+      >
+        <motion.div
+          className="absolute top-0 left-0 right-0 h-0.5 bg-zinc-800 z-50"
+          aria-hidden="true"
+        >
+          <motion.div
+            className="h-full bg-amber-500 origin-left"
+            style={{ scaleX: scrollYProgress }}
+          />
         </motion.div>
 
-        <div className="relative space-y-6 sm:space-y-8">
-          {/* Mobile: Horizontal timeline indicator */}
-          <div className="lg:hidden flex items-center gap-2 mb-6 overflow-x-auto pb-2 scrollbar-hide">
-            {itemsInfo && itemsInfo.map((_, i) => {
-              const vis = visuals[i % visuals.length];
-              return (
-                <div key={i} className="flex items-center gap-2 shrink-0">
-                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: vis.glowColor.replace("0.15", "0.8") }} />
-                  {i < (itemsInfo?.length || 0) - 1 && <div className="w-4 h-px bg-white/10" />}
-                </div>
-              );
-            })}
+        <div className="max-w-7xl mx-auto px-6 w-full pt-10 pb-4">
+          <SectionLabel>{data.label}</SectionLabel>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-3 leading-tight">
+            {data.title}
+          </h2>
+          <p className="text-base md:text-lg text-zinc-500 max-w-2xl">{data.subtitle}</p>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col lg:flex-row gap-10 items-center pb-6">
+          <div className="lg:w-1/2 w-full">
+            <TextPanel
+              progress={progress}
+              states={data.states}
+              closingHeadline={data.closingHeadline}
+            />
           </div>
+          <div className="lg:w-1/2 w-full flex items-center justify-center">
+            <SiloFlow progress={progress} silos={data.silos} />
+          </div>
+        </div>
 
-          {/* Desktop: Vertical timeline */}
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-neon/40 via-primary/40 via-accent/40 via-success/40 to-yellow-400/40 hidden lg:block" />
+        <FoundationBar progress={progress} {...data.foundation} />
 
-          {itemsInfo && itemsInfo.map((step, i) => {
-            const vis = visuals[i % visuals.length];
-            return (
-            <motion.div key={step.id} initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : undefined} transition={{ duration: 0.5, delay: 0.15 * i }} className="relative">
-              {/* Mobile: Card number badge */}
-              <div className="lg:hidden absolute -left-1 top-4 w-6 h-6 rounded-full bg-surface border border-white/10 flex items-center justify-center text-xs font-mono text-muted">
-                {i + 1}
-              </div>
-
-              {/* Desktop: Timeline dot */}
-              <div className="absolute left-8 top-8 w-3 h-3 -translate-x-1.5 rounded-full bg-current hidden lg:block" style={{ color: vis.glowColor.replace("0.15", "1") }}>
-                <div className="absolute inset-0 rounded-full animate-ping opacity-30" style={{ backgroundColor: vis.glowColor.replace("0.15", "0.6") }} />
-              </div>
-
-              <div className="lg:ml-16 ml-8 sm:ml-10">
-                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 items-start">
-                  <div className="space-y-2 sm:space-y-3">
-                    <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-                      <code className={cn("font-mono text-xs sm:text-sm font-semibold px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-white/[0.08] bg-surface", vis.color)}>{step.command}</code>
-                      <span className="text-xs text-muted font-mono">→ {vis.agent}</span>
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-foreground">{step.desc1}</h3>
-                    <p className="text-sm text-muted leading-relaxed">{step.desc2}</p>
-                  </div>
-                  <div className="bg-[#0d0d12] border border-white/[0.06] rounded-xl overflow-hidden shadow-2xl w-full">
-                    <div className="px-3 sm:px-4 py-2 border-b border-white/[0.06] flex items-center justify-between bg-white/[0.02]">
-                      <div className="flex gap-1.5">
-                        <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-white/20" />
-                        <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-white/20" />
-                        <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-white/20" />
-                      </div>
-                    </div>
-                    <div className="p-3 sm:p-4 overflow-x-auto">
-                      <pre className="text-[10px] sm:text-xs font-mono leading-loose"><code className="text-muted/80">{vis.snippet}</code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )})}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+          {Array.from({ length: STATE_COUNT }).map((_, i) => (
+            <Dot key={i} index={i} progress={progress} />
+          ))}
         </div>
       </div>
     </section>
+  )
+}
+
+function TextPanel({
+  progress,
+  states,
+  closingHeadline,
+}: {
+  progress: MotionValue<number>
+  states: string[]
+  closingHeadline: string
+}) {
+  const slideY = useTransform(
+    progress,
+    states.map((_, i) => i),
+    states.map((_, i) => -i * TEXT_PANEL_HEIGHT)
+  )
+
+  return (
+    <div
+      className="relative overflow-hidden"
+      style={{ height: `${TEXT_PANEL_HEIGHT}px` }}
+    >
+      <motion.div style={{ y: slideY, willChange: "transform" }}>
+          {states.map((s, i) => {
+            const isLast = i === states.length - 1
+            return (
+              <div
+                key={i}
+                className="flex flex-col justify-center px-1"
+                style={{ height: `${TEXT_PANEL_HEIGHT}px` }}
+              >
+                <p
+                  className={`text-xl md:text-2xl lg:text-3xl font-medium tracking-tight leading-snug ${
+                    isLast ? "text-zinc-400" : "text-white"
+                  }`}
+                  dangerouslySetInnerHTML={{ __html: s }}
+                />
+                {isLast && (
+                  <p
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-amber-500 mt-3"
+                    dangerouslySetInnerHTML={{ __html: closingHeadline }}
+                  />
+                )}
+              </div>
+            )
+          })}
+      </motion.div>
+    </div>
+  )
+}
+
+function SiloFlow({
+  progress,
+  silos,
+}: {
+  progress: MotionValue<number>
+  silos: string[]
+}) {
+  const lineProgress = useTransform(progress, [0, STATE_COUNT - 1], [0, 1])
+
+  return (
+    <div className="w-full max-w-xl">
+      <div className="relative px-2">
+        <div className="absolute top-1/2 left-2 right-2 h-1.5 -translate-y-1/2 bg-zinc-800 rounded-full" />
+        <motion.div
+          className="absolute top-1/2 left-2 right-2 h-1.5 -translate-y-1/2 bg-gradient-to-r from-amber-500 to-amber-400 rounded-full origin-left"
+          style={{ scaleX: lineProgress }}
+        />
+        <div className="relative flex justify-between items-center py-4">
+          {silos.map((name, i) => (
+            <SiloNode
+              key={name}
+              name={name}
+              index={i}
+              progress={progress}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function SiloNode({
+  name,
+  index,
+  progress,
+}: {
+  name: string
+  index: number
+  progress: MotionValue<number>
+}) {
+  const fill = useTransform(progress, (p) =>
+    Math.max(0, Math.min(1, p - index + 0.5))
+  )
+
+  const scale = useTransform(fill, [0, 0.5, 1], [0.9, 1.12, 1])
+  const backgroundColor = useTransform(
+    fill,
+    [0, 0.5, 1],
+    ["rgb(24, 24, 27)", "rgb(245, 158, 11)", "rgb(245, 158, 11)"]
+  )
+  const borderColor = useTransform(
+    fill,
+    [0, 0.4, 0.5, 1],
+    [
+      "rgb(39, 39, 42)",
+      "rgb(82, 82, 91)",
+      "rgb(245, 158, 11)",
+      "rgb(245, 158, 11)"
+    ]
+  )
+  const textColor = useTransform(
+    fill,
+    [0, 0.4, 0.5],
+    ["rgb(113, 113, 122)", "rgb(161, 161, 170)", "rgb(255, 255, 255)"]
+  )
+  const boxShadow = useTransform(
+    fill,
+    [0, 0.5, 1],
+    [
+      "0 0 0 rgba(245, 158, 11, 0)",
+      "0 0 32px rgba(245, 158, 11, 0.55)",
+      "0 0 10px rgba(245, 158, 11, 0.2)"
+    ]
+  )
+
+  return (
+    <motion.div
+      className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center border-2"
+      style={{ scale, backgroundColor, borderColor, boxShadow }}
+    >
+      <motion.span
+        className="text-xs md:text-sm font-semibold px-1 text-center leading-tight"
+        style={{ color: textColor }}
+      >
+        {name}
+      </motion.span>
+    </motion.div>
+  )
+}
+
+function FoundationBar({
+  progress,
+  title,
+  subtitle,
+}: {
+  progress: MotionValue<number>
+  title: string
+  subtitle: string
+}) {
+  const opacity = useTransform(progress, [3.5, 4.2], [0, 1])
+  const y = useTransform(progress, [3.5, 4.2], [30, 0])
+
+  return (
+    <motion.div
+      className="max-w-7xl mx-auto px-6 w-full"
+      style={{ opacity, y }}
+    >
+      <div className="bg-zinc-950 rounded-2xl border border-amber-500/30 h-20 flex flex-col items-center justify-center shadow-[0_0_60px_rgba(245,158,11,0.15)]">
+        <span className="text-amber-500 font-semibold text-lg md:text-xl tracking-tight">
+          {title}
+        </span>
+        <span className="text-zinc-600 text-xs md:text-sm tracking-tight mt-1">
+          {subtitle}
+        </span>
+      </div>
+    </motion.div>
+  )
+}
+
+function Dot({
+  index,
+  progress,
+}: {
+  index: number
+  progress: MotionValue<number>
+}) {
+  const dist = useTransform(progress, (v) => Math.abs(v - index))
+  const width = useTransform(dist, [0, 0.5, 1.5], [36, 18, 8])
+  const backgroundColor = useTransform(
+    dist,
+    [0, 0.4, 1.5],
+    ["rgb(245, 158, 11)", "rgb(245, 158, 11)", "rgb(63, 63, 70)"]
+  )
+
+  return (
+    <motion.div
+      className="h-2 rounded-full"
+      style={{ width, backgroundColor }}
+    />
   )
 }
