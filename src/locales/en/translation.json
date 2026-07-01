@@ -13,11 +13,11 @@
     "subtitle": "A team of specialized AI skills that share a persistent workspace — covering the full development lifecycle from requirements to tested code. Install once, ship end-to-end.",
     "ctaPrimary": "Get Started",
     "ctaSecondary": "See How It Works",
-    "installCommand": "npx @uoyo/mvtt install",
+    "installCommand": "npx @uoyo/mvtt@latest install",
     "statsTitle": "A team of skills, each playing its role. Building the full development lifecycle.",
     "stats": [
       { "value": "Full", "label": "Dev Lifecycle" },
-      { "value": "20+", "label": "Built-in Skills" },
+      { "value": "25", "label": "Built-in Skills" },
       { "value": "Anytime", "label": "Resume Context" },
       { "value": "EN/CN", "label": "Bilingual" }
     ],
@@ -39,22 +39,22 @@
   },
   "problem": {
     "label": "The Problem",
-    "title": "Every AI session starts from zero.",
+    "title": "Every AI session starts from zero",
     "intro": "The project context you built yesterday — the architecture, the conventions, the domain knowledge — is gone today. Three things make this painful on real projects.",
     "items": [
       {
         "icon": "solar:cloud-rain-linear",
-        "title": "Context evaporates.",
+        "title": "Context evaporates",
         "desc": "Close the IDE, switch machines, come back next week — the AI has forgotten everything."
       },
       {
         "icon": "solar:repeat-linear",
-        "title": "Same preamble every time.",
+        "title": "Same preamble every time",
         "desc": "Re-explain the tech stack, re-state the conventions, re-describe the domain. Again and again."
       },
       {
         "icon": "solar:layers-minimalistic-linear",
-        "title": "No separation of concerns.",
+        "title": "No separation of concerns",
         "desc": "Analysis, design, code, and tests jumbled in a single conversation. No structure, no handoffs."
       }
     ],
@@ -62,7 +62,7 @@
   },
   "persistent": {
     "label": "Persistent Context",
-    "title": "Context that grows<br/>with your project.",
+    "title": "Context that grows<br/>with your project",
     "desc": "Context is never lost between conversations. Start a new AI Agent session tomorrow and it picks up exactly where you left off — your domain model, architecture decisions, in-progress tasks, and team conventions are all there.",
     "features": [
       {
@@ -100,7 +100,7 @@
   },
   "workflow": {
     "label": "The Workflow",
-    "title": "One shared truth. Zero drift.",
+    "title": "One shared truth. Zero drift",
     "subtitle": "When the Analyst discovers a domain concept, the Architect sees it. When the Architect makes a design decision, the Developer follows it.",
     "silos": ["Analyze", "Design", "Plan", "Implement", "Review", "Test"],
     "states": [
@@ -119,7 +119,7 @@
   },
   "skills": {
     "label": "The Skills",
-    "title": "Not commands. An integrated team.",
+    "title": "Not commands. An integrated team",
     "subtitle": "Every skill's output becomes the next skill's input. Context compounds instead of evaporating.",
     "categories": [
       {
@@ -137,10 +137,11 @@
       },
       {
         "id": "shortcuts",
-        "label": "Shortcuts — Skip the Ceremony",
+        "label": "Practical Skills",
         "layout": "wide",
         "items": [
           { "icon": "solar:radar-2-linear", "command": "/mvt-bug-detect", "useWhen": "You suspect a bug and want diagnosis before any change.", "desc": "Investigates root cause and impact scope. Read-only — makes no code changes." },
+          { "icon": "solar:chat-square-linear", "command": "/mvt-consult", "useWhen": "Want to understand project logic or verify a detail.", "desc": "Answers from knowledge and source code. Read-only — makes no code changes." },
           { "icon": "solar:bug-linear", "command": "/mvt-fix", "useWhen": "Bug is confirmed and you're ready to resolve it.", "desc": "Diagnoses and fixes with full context awareness of the codebase." },
           { "icon": "solar:refresh-linear", "command": "/mvt-refactor", "useWhen": "You want to restructure code without changing behavior.", "desc": "Refactors with awareness of architecture decisions and conventions." },
           { "icon": "solar:bolt-linear", "command": "/mvt-quick-dev", "useWhen": "1-3 file change, well-scoped, architecturally neutral.", "desc": "Goes straight to implementation, skipping the full workflow ceremony." }
@@ -178,7 +179,7 @@
   },
   "recipes": {
     "label": "Common Recipes",
-    "title": "Pick the recipe that fits.",
+    "title": "Pick the recipe that fits",
     "subtitle": "You don't always need every skill. Each recipe is a starting point — /mvt-help suggests the next step based on your project's actual state.",
     "items": [
       { "name": "Add a new feature", "steps": [
@@ -206,7 +207,7 @@
   },
   "whoIsFor": {
     "label": "Who This Is For",
-    "title": "For developers who use AI Agent<br/>on real, ongoing projects.",
+    "title": "For developers who use AI Agent<br/>on real, ongoing projects",
     "subtitle": "Not one-off scripts. Real codebases with real context that needs to persist.",
     "fit": [
       "You maintain a medium-sized codebase (5k+ LOC) and feel context-loss pain every day.",
@@ -225,7 +226,7 @@
   },
   "faq": {
     "label": "FAQ",
-    "title": "Common questions.",
+    "title": "Common questions",
     "items": [
       {
         "q": "How is MVTT different from a well-written CLAUDE.md?",
@@ -251,11 +252,11 @@
   },
   "install": {
     "label": "Get Started",
-    "title": "One command to<br/><muted>install your team.</muted>",
+    "title": "One command to<br/><muted>install your team</muted>",
     "subtitle": "Install MVTT into any project. A full team of specialized AI skills, ready in under a minute. No config needed. Works with any existing codebase.",
     "codeLines": [
-      { "prefix": "$", "text": "npx @uoyo/mvtt install" },
-      { "prefix": "#", "text": "Open in AI Agent, then:" },
+      { "prefix": "$", "text": "npx @uoyo/mvtt@latest install" },
+      { "prefix": "#", "text": "Open in AI Agent (e.g. Claude Code), then:" },
       { "prefix": ">", "text": "/mvt-init" },
       { "prefix": ">", "text": "/mvt-analyze" }
     ],

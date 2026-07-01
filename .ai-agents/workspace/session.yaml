@@ -1,36 +1,37 @@
 session:
-  initialized_at: ""
+  initialized_at: 2026-07-01T07:10:37.824Z
   last_synced_at: ""
-
 active_epic:
   id: ""
   title: ""
   created_at: ""
   epic_path: ""
-
 epics: []
-  # - id: "epic-20260608-ecommerce-platform"
-  #   title: "ecommerce platform"
-  #   epic_path: ".ai-agents/workspace/artifacts/epic-20260608-ecommerce-platform/epic.yaml"
-  #   status: "active"   # active | done | abandoned
-  #   updated_at: "..."
-
 active_change:
   id: ""
   title: ""
   created_at: ""
   plan_path: ""
-  epic_id: ""            # epic parent id or empty
-
+  epic_id: ""
 changes: []
-  # - id: "chg-001"
-  #   title: "User authentication"
-  #   plan_path: ".ai-agents/workspace/artifacts/chg-001/plan.yaml"
-  #   status: "active"           # active | done | abandoned
-  #   updated_at: "2026-05-23T14:30:00"
-
-history: []
-  # - skill: "/mvt-analyze"
-  #   completed_at: "2026-05-23T14:30:00"
-  #   summary: "Analyzed user authentication requirements"
-  #   change_id: ""   # set when work belongs to an active change
+history:
+  - skill: /mvt-init
+    completed_at: 2026-07-01T07:10:37.824Z
+    summary: "Initialized project: detected web-frontend (React 19 + TypeScript + Vite 6 + Tailwind CSS 4)"
+    change_id: ""
+  - skill: /mvt-analyze-code
+    completed_at: 2026-07-01T07:12:26.715Z
+    summary: "Analyzed existing codebase: extracted 5 modules, 15 core terms, layer rules, and API contracts for React 19 landing page"
+    change_id: ""
+  - skill: /mvt-quick-dev
+    completed_at: 2026-07-01T07:17:46.181Z
+    summary: Added /mvt-consult skill to Shortcuts section and updated skill count from 20+ to 25 in landing page translations
+    change_id: ""
+  - skill: /mvt-bug-detect
+    completed_at: 2026-07-01T07:24:56.866Z
+    summary: Removed trailing sentence-ending punctuation from 20 title fields across EN/ZH translations
+    change_id: ""
+  - skill: /mvt-fix
+    completed_at: 2026-07-01T07:45:02.574Z
+    summary: Updated ZH shortcuts category label from '快捷方式——跳过仪式感' to '实用技能'
+    change_id: ""
